@@ -1,6 +1,6 @@
 # Portfolio
 <html>
-  <h6>This is portfolio and it contains information about me including;</h6>
+  <h6>This is my portfolio and it contains information about me including;</h6>
   <ul>
     <li>skills</li>
     <li>resume</li>

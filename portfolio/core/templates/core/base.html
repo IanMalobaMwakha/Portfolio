@@ -37,7 +37,6 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-top: 80px;
       }
 
       .mobile-menu ul.navbar-nav li {
@@ -50,9 +49,17 @@
         text-transform: capitalize;
       }
 
-      .navbar-brand-text {
+      .navbar {
+        background-color: #7D36BC;
+        transition: background-color 0.5s ease;
+      }
+
+      .navbar.scrolled {
+        background-color: #49978D;
+      }
+
+      .navbar-brand {
         font-family: "Brush Script MT", "Brush Script Std", cursive;
-        margin-left: 20px;
       }
     </style>
   </head>
@@ -130,6 +137,16 @@
 
       document.querySelector('.close-menu').addEventListener('click', function() {
         document.querySelector('.mobile-menu').style.display = 'none';
+      });
+
+      // Change navbar background color on scroll
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
       });
     </script>
   </body>

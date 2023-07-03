@@ -7,7 +7,6 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <title>{% block title %}{% endblock %} Ian's Portfolio </title>
 
     <style>
@@ -17,7 +16,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(37, 32, 32, 0.9);
         z-index: 9999;
         display: none;
       }
@@ -51,8 +50,8 @@
       }
 
       .navbar {
-        background-color: #7D36BC;
-        transition: background-color 0.5s ease;
+        background-color: #600fa7 !important;
+        transition: background-color 0.5s ease !important;
       }
 
       .navbar.scrolled {
@@ -89,6 +88,7 @@
 
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" href="#Home"><b>Home</b></a></li>
               <li class="nav-item"><a class="nav-link active" href="#About"><b>About</b></a></li>
               <li class="nav-item"><a class="nav-link active" href="#Skills"><b>Skills</b></a></li>
               <li class="nav-item"><a class="nav-link active" href="#Resume"><b>Resume</b></a></li>

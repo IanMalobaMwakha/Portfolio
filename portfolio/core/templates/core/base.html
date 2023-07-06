@@ -53,23 +53,14 @@
         background-color: #600fa7 !important;
         transition: background-color 0.5s ease !important;
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         margin-left: auto;
         margin-right: auto;
       }
 
-
-      .navbar.scrolled {
-        background-color: #49978D;
-      }
-
       .navbar-brand {
         font-family: "Brush Script MT", "Brush Script Std", cursive;
-      }
-
-      .navbar-toggler-icon {
-        background-color: #fff;
       }
 
       .nav-item {
@@ -85,7 +76,7 @@
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="assets/img/logo.png" alt=""> -->
             <i class="bi bi-camera"></i>
-            <h1 class="navbar-brand-text">Ian Maloba M.</h1>
+            <h1 class="navbar-brand-text">Ian Maloba</h1>
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -127,13 +118,7 @@
               <li class="nav-item"><a class="nav-link active" href="#Resume"><b>Resume</b></a></li>
               <li class="nav-item"><a class="nav-link active" href="#Projects"><b>Projects</b></a></li>
               <li class="nav-item"><a class="nav-link active" href="#Contact"><b>Contact</b></a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Others</b> <i class="bi bi-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">#Gallery</a></li>
-                  <li><a class="dropdown-item" href="#">#Blogs</a></li>
-                </ul>
-              </li>
+              <li class="nav-item"><a class="nav-link active" href="#"><b>Blogs</b></a></li>
       </ul>
     </div>
 
@@ -142,24 +127,5 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      document.querySelector('.navbar-toggler').addEventListener('click', function() {
-        document.querySelector('.mobile-menu').style.display = 'block';
-      });
-
-      document.querySelector('.close-menu').addEventListener('click', function() {
-        document.querySelector('.mobile-menu').style.display = 'none';
-      });
-
-      // Change navbar background color on scroll
-      window.addEventListener('scroll', function() {
-        var navbar = document.querySelector('.navbar');
-        if (window.scrollY > 0) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
-    </script>
-  </body>
+    </body>
 </html>

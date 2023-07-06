@@ -5,3 +5,13 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").fadeIn();
 
 });
+
+/**
+ * References
+ * 
+ * https://codepen.io/ianmalobamwakha/pen/xxQXVyR
+ * 
+ * https://codepen.io/albizan/pen/mMWdWZ
+ * 
+ * 
+ */

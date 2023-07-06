@@ -43,3 +43,7 @@ h3 {
     color: white;
 }
 
+.navbar-brand-text {
+    text-shadow: 2px 2px #FF0000;
+}
+

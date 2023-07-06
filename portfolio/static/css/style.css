@@ -1,0 +1,18 @@
+body {
+    background-color:rgb(39, 29, 29);
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar {
+    background-color: blue !important;
+    text-decoration-color: blue;
+}
+

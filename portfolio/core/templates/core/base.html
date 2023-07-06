@@ -10,62 +10,7 @@
     <title>{% block title %}{% endblock %} Ian's Portfolio </title>
 
     <style>
-      .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(37, 32, 32, 0.9);
-        z-index: 9999;
-        display: none;
-      }
-
-      .mobile-menu .close-menu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .mobile-menu ul.navbar-nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin-top: 50px;
-      }
-
-      .mobile-menu ul.navbar-nav li {
-        margin-bottom: 20px;
-      }
-
-      .mobile-menu ul.navbar-nav li a {
-        color: #fff;
-        font-size: 20px;
-        text-transform: capitalize;
-      }
-
-      .navbar {
-        background-color: #600fa7 !important;
-        transition: background-color 0.5s ease !important;
-        width: 100%;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .navbar-brand {
-        font-family: "Brush Script MT", "Brush Script Std", cursive;
-      }
-
-      .nav-item {
-        margin-top: 10px;
-      } 
+     
     </style>
   </head>
   <body>
@@ -102,21 +47,6 @@
       {% block content %}
       {% endblock %}
     </div>
-
-    <div class="mobile-menu">
-      <div class="close-menu"><i class="bi bi-x"></i>X</div>
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#Home"><b>Home</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#About"><b>About</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#Skills"><b>Skills</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#Resume"><b>Resume</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#Projects"><b>Projects</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#Contact"><b>Contact</b></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#"><b>Blogs</b></a></li>
-      </ul>
-    </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>

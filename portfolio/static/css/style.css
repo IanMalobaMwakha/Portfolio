@@ -14,6 +14,14 @@ body {
     height: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#Home {
+    background-color: blueviolet;
+}
+
 h3 {
     color: white;
     text-align: center;
@@ -24,9 +32,12 @@ h3 {
 }
 
 .navbar {
-    background-color: rgb(117, 117, 146) !important;
-    text-decoration-color: blue;
+    background-color: rgb(132, 24, 165) !important;
 }
+
+.navbar.scrolled {
+    background-color: #49978D;
+  }
 
 .nav-item {
     color: white;

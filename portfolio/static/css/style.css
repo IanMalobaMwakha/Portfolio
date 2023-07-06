@@ -1,5 +1,17 @@
 body {
     background-color:rgb(39, 29, 29);
+    color: white;
+
+}
+
+#Home,
+#About,
+#Skills,
+#Resume,
+#Projects,
+#Contact,
+#Blogs {
+    height: auto;
 }
 
 h3 {
@@ -12,7 +24,11 @@ h3 {
 }
 
 .navbar {
-    background-color: blue !important;
+    background-color: rgb(117, 117, 146) !important;
     text-decoration-color: blue;
+}
+
+.nav-item {
+    color: white;
 }
 

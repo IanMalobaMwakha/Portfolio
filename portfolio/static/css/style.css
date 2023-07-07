@@ -1,5 +1,5 @@
 body {
-    /* background-color:rgb(39, 29, 29); */
+    background-color: rgb(26, 22, 22) !important;
     color: white;
 
 }
@@ -47,8 +47,8 @@ html {
 }
 
 
-h3 {
-    color: white;
+h2 {
+    color: whitesmoke;
     text-align: center;
 }
 

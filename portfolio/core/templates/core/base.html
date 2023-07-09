@@ -10,8 +10,7 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>{% block title %}{% endblock %} Ian's Portfolio </title>
-
+    <title>{% block title %}{% endblock %} Ian Maloba | Portfolio </title>
     <style>
     </style>
   </head>
@@ -54,6 +53,7 @@
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
+
     $(window).scroll(function() {
         if ($(document).scrollTop() > 50) {
             $('.nav').addClass('affix');
@@ -75,8 +75,6 @@ $('.navlinks li a').click(function() {
     $(".navTrigger").removeClass("active");
     $("#mainListDiv").removeClass("show_list");
 });
-
-
 
 </script>
 

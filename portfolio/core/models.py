@@ -4,3 +4,6 @@ class Home(models.Model):
     background_image = models.ImageField(upload_to='home_images', blank=True, null=True)
     name = models.CharField(max_length=255)
     official_image = models.ImageField(upload_to='home_images', blank=True, null=True)
+
+    def __str__(self):
+        return self.name

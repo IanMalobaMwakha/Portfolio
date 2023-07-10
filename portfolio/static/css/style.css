@@ -4,10 +4,10 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(53, 160, 202) !important;
-    background-image: url("{{ background_image.url }}");
+    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
     background-position: center top;
     background-size: cover;
-    padding-top: 95px;
+    padding-top: 5%;
 }
 
 .name {
@@ -28,6 +28,9 @@
 .official-img {
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 2s infinite  alternate;
+    border-radius: 4% !important;
+
+    
 }
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
@@ -88,6 +91,12 @@ h2 {
     text-align: center;
     font-size: 35px !important;
     font-weight: bold;
+
+.text-underline {
+    border-bottom: 5px solid blueviolet;
+    display: inline;
+      }
+      
 
 }
 

@@ -7,6 +7,8 @@
     background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
     background-position: center top;
     background-size: cover;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -42,20 +44,28 @@
 
 
 /* About section */
-
 .about-container {
-    background-color: #986ecf !important;
-    border-radius: 10px;
-    padding: 20px;
-  }
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #26153d;
+    box-sizing: border-box;
+}
 
-  .about-container p {
+.about-container p {
     margin-bottom: 10px;
-  }
+}
 
-  .about-container .unnoficial_picture {
+.about-container .unnoficial_picture {
     margin-top: 10px;
-  }
+}
+
+.about-description {
+    font-size: 16px;
+    margin-bottom: 0.6rem;
+    padding-left: 3%;
+}
 
 /* Skills section */
 
@@ -118,7 +128,7 @@ html,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 68.5%;
+    font-size: 50.5%;
     font-size: 10px;
 }
 

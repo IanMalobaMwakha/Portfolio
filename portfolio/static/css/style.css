@@ -43,6 +43,19 @@
 
 /* About section */
 
+.about-container {
+    background-color: #986ecf !important;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .about-container p {
+    margin-bottom: 10px;
+  }
+
+  .about-container .unnoficial_picture {
+    margin-top: 10px;
+  }
 
 /* Skills section */
 

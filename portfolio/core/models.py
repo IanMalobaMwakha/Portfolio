@@ -11,3 +11,5 @@ class Home(models.Model):
 class About(models.Model):
     unofficial_image = models.ImageField(upload_to='about_images', blank=True, null=True)
 
+    def __str__(self):
+        return self.unofficial_image

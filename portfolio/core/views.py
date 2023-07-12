@@ -17,8 +17,8 @@ def index(request):
 
 
 def about(request):
-    unoficial_image = About.objects.get()
+    unofficial_image = About.objects.get()
 
     return render(request, 'core/index.html', {
-        'unofficial_image': unoficial_image,
+        'unofficial_image': unofficial_image,
     })

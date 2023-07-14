@@ -262,11 +262,11 @@ html,
 }
 
 #mainListDiv .navlinks .nav-link.underline {
-    text-decoration: underline !important;
+    text-decoration: underline 4px solid !important;
   }
 
   #mainListDiv .navlinks .nav-link:hover {
-    text-decoration: underline !important; 
+    text-decoration: underline  4px solid !important; 
   }
   
   #mainListDiv .navlinks .nav-link {

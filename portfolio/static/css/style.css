@@ -42,23 +42,22 @@
     100% { transform: translateY(-20px); }
 }
 
-.btn-cv_download {
+.btn-cv-download {
     letter-spacing: 1px;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 10px 28px;
     font-family: Poppins,sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     transition: all .5s;
     display: inline-block;
-    font-weight: bold;
     padding: 5px;
 }
 
-  .btn-cv_download:hover {
+  .btn-cv-download:hover {
     background-color: whitesmoke;
     color: rgb(55, 10, 139);
   }
@@ -91,6 +90,27 @@
     text-align: justify;
     padding-left: 10px;
     padding-right: -10px;
+}
+
+.btn-contact-me {
+    letter-spacing: 1px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 28px;
+    font-family: Poppins,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .5s;
+    display: inline-block;
+    padding: 5px;
+}
+
+.btn-contact-me:hover {
+    background-color: whitesmoke;
+    color: rgb(55, 10, 139);
+  
 }
 
 /* Skills section */
@@ -230,9 +250,6 @@ html,
 
 }
 
-
-
-
 .navTrigger {
     display: none;
 }
@@ -243,6 +260,15 @@ html,
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.nav-link {
+    text-decoration: none !important;
+  }
+  
+  #main-nav .nav-link.underline {
+    text-decoration: underline !important;
+  }
+  
 
 
 /* Media qurey section */

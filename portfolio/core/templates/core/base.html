@@ -21,15 +21,15 @@
           <div class="logo">
               <a href="{% url 'index' %}"><i>IAN MALOBA M.</i></a>
           </div>
-          <div id="mainListDiv" class="main_list">
+          <div id="mainListDiv" class="main_list" id="main-nav">
               <ul class="navlinks">
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#About">About</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li> <a href="#Resume">Resume</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li> <a href="#Contact">Contact</a></li>
-            <li><a href="#Blogs">Blogs</a></li>
+            <li> <a href="#" class="nav-link">Home</a></li>
+            <li> <a href="#About" class="nav-link">About</a></li>
+            <li><a href="#Skills" class="nav-link">Skills</a></li>
+            <li> <a href="#Resume" class="nav-link">Resume</a></li>
+            <li><a href="#Projects" class="nav-link">Projects</a></li>
+            <li> <a href="#Contact" class="nav-link">Contact</a></li>
+            <li><a href="#Blogs" class="nav-link">Blogs</a></li>
               </ul>
           </div>
           <span class="navTrigger">
@@ -75,6 +75,29 @@ $('.navlinks li a').click(function() {
     $(".navTrigger").removeClass("active");
     $("#mainListDiv").removeClass("show_list");
 });
+
+</script>
+
+
+
+<!-- Function used to underline the navbar inks when in page -->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var navLinks = document.querySelectorAll("#main-nav .nav-link");
+  var currentPath = window.location.pathname;
+
+  for (var i = 0; i < navLinks.length; i++) {
+    var link = navLinks[i].getAttribute("href");
+    var linkPath = link.split("/").pop().replace(/\.[^/.]+$/, "");
+
+    if (linkPath === currentPath) {
+      navLinks[i].classList.add("underline");
+    }
+  }
+});
+
 
 </script>
 

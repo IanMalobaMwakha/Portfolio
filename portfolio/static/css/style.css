@@ -152,7 +152,6 @@ body {
     border: none;
     outline: none;
     background-color: yellow;
-    color: black;
     cursor: pointer;
     padding: 0;
     border-radius: 50%;
@@ -166,7 +165,7 @@ body {
   }
   
   #myBtn:hover {
-    background-color: black;
+    background-color: blue;
     color: whitesmoke;
   }
   

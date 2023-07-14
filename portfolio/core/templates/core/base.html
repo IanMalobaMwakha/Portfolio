@@ -75,7 +75,6 @@ $('.navlinks li a').click(function() {
     $(".navTrigger").removeClass("active");
     $("#mainListDiv").removeClass("show_list");
 });
-
 </script>
 
 
@@ -83,24 +82,22 @@ $('.navlinks li a').click(function() {
 <!-- Function used to underline the navbar inks when in page -->
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  var navLinks = document.querySelectorAll("#main-nav .nav-link");
-  var currentPath = window.location.pathname;
-
-  for (var i = 0; i < navLinks.length; i++) {
-    var link = navLinks[i].getAttribute("href");
-    var linkPath = link.split("/").pop().replace(/\.[^/.]+$/, "");
-
-    if (linkPath === currentPath) {
-      navLinks[i].classList.add("underline");
-    }
-  }
-});
-
-
-</script>
-
+    window.onload = function() {
+      var navLinks = $("#mainListDiv .navlinks .nav-link");
+      var currentHash = window.location.hash;
+    
+      navLinks.each(function() {
+        var link = $(this).attr("href");
+    
+        if (link === currentHash) {
+          $(this).addClass("underline");
+        }
+      });
+    };
+    </script>
+    
 
     </body>
 </html>

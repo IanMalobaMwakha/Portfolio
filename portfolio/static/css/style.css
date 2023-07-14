@@ -261,12 +261,12 @@ html,
     transition: all 0.4s ease;
 }
 
-.nav-link {
-    text-decoration: none !important;
+#mainListDiv .navlinks .nav-link.underline {
+    text-decoration: underline !important;
   }
   
-  #main-nav .nav-link.underline {
-    text-decoration: underline !important;
+#mainListDiv .navlinks .nav-link {
+    text-decoration: none !important;
   }
   
 

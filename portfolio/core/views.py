@@ -26,11 +26,11 @@ def about(request):
 
 
 def skills(request):
-    professional_skills = Skill.objects.filter(skill_type='professional')
+    professional_categories = Skill.objects.filter(skill_type='professional', parent_skill__isnull=True)
     personal_skills = Skill.objects.filter(skill_type='personal')
-    
+
     context = {
-        'professional_skills': professional_skills,
+        'professional_categories': professional_categories,
         'personal_skills': personal_skills
     }
-    return render(request, 'portfolio/portfolio.html', context)
+    return render(request, 'core/index.html', context)

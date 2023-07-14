@@ -137,6 +137,29 @@
       <br>
     </div>
   </div>
+
+
+  <h2>Professional Skills</h2>
+  <ul>
+    {% for category in professional_categories %}
+      <li>{{ category.name }}</li>
+      <ul>
+        {% for skill in category.subskills.all %}
+          <li>{{ skill.name }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </ul>
+  
+  <h2>Personal Skills</h2>
+  <ul>
+    {% for skill in personal_skills %}
+      <li>{{ skill.name }}</li>
+    {% endfor %}
+  </ul>
+  
+  
+
 </div>
 
 <br></section>

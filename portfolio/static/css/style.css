@@ -42,6 +42,35 @@
     100% { transform: translateY(-20px); }
 }
 
+.button {
+    background-color: inherit;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height: 50px; 
+  }
+  
+  .button1 {
+    background-color: black; 
+    color: whitesmoke; 
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+  }
+
+  .button1:hover {
+    background-color: whitesmoke;
+    color: rgb(55, 10, 139);
+  }
+  
+  
+
 
 /* About section */
 .about-container {

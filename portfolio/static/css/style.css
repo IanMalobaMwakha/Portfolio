@@ -42,7 +42,7 @@
     100% { transform: translateY(-20px); }
 }
 
-.btn-get-started {
+.btn-cv_download {
     letter-spacing: 1px;
     color: #fff;
     border: 2px solid #fff;
@@ -58,7 +58,7 @@
     padding: 5px;
 }
 
-  .btn-get-started:hover {
+  .btn-cv_download:hover {
     background-color: whitesmoke;
     color: rgb(55, 10, 139);
   }

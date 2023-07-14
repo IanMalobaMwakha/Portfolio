@@ -86,17 +86,18 @@ $('.navlinks li a').click(function() {
 <script>
 $(document).ready(function() {
   var navLinks = $("#mainListDiv .navlinks .nav-link");
-  var currentHash = window.location.hash;
+  var currentURL = window.location.href;
 
   navLinks.each(function() {
     var link = $(this).attr("href");
 
-    if (link === currentHash) {
+    if (link === currentURL) {
       $(this).addClass("underline");
     }
   });
 });
 </script>
+
     
 
     </body>

@@ -84,20 +84,23 @@ $('.navlinks li a').click(function() {
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function() {
-  var navLinks = $("#mainListDiv .navlinks .nav-link");
-  var currentURL = window.location.href;
+ $(document).ready(function() {
+  var navLinks = $(".navlinks .nav-link");
 
-  navLinks.each(function() {
-    var link = $(this).attr("href");
-
-    if (link === currentURL) {
-      $(this).addClass("underline");
-    }
+  navLinks.on("click", function() {
+    navLinks.removeClass("underline");
+    $(this).addClass("underline");
   });
-});
-</script>
 
+  // Highlight the current page's link initially
+  var currentHash = window.location.hash;
+  if (currentHash) {
+    navLinks.filter('[href="' + currentHash + '"]').addClass("underline");
+  }
+});
+
+
+</script>
     
 
     </body>

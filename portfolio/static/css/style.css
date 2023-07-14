@@ -264,9 +264,45 @@ html,
 #mainListDiv .navlinks .nav-link.underline {
     text-decoration: underline !important;
   }
+
+  #mainListDiv .navlinks .nav-link:hover {
+    text-decoration: underline !important; 
+  }
   
-#mainListDiv .navlinks .nav-link {
+  #mainListDiv .navlinks .nav-link {
     text-decoration: none !important;
+  }
+  
+  #mainListDiv .navlinks .nav-link.underline::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 1s ease-in-out;
+  }
+  
+  #mainListDiv .navlinks .nav-link.underline:hover::after,
+  #mainListDiv .navlinks .nav-link.underline:active::after {
+    width: 100%;
+  }
+  
+  #mainListDiv .navlinks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #mainListDiv .navlinks .nav-link {
+    margin-right: -30px !important; /* Adjust the right margin as desired */
+    font-size: 20px !important;
+    font-weight: bolder;
+  }
+  
+  #mainListDiv .navlinks .nav-link:last-child {
+    margin-right: 0;
   }
   
 

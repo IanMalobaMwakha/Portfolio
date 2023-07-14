@@ -84,12 +84,23 @@ $('.navlinks li a').click(function() {
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
- $(document).ready(function() {
+$(document).ready(function() {
   var navLinks = $(".navlinks .nav-link");
 
-  navLinks.on("click", function() {
+  // Update the underline on scroll
+  $(window).on("scroll", function() {
+    var scrollPosition = $(window).scrollTop();
+
+    // Remove underline from all links
     navLinks.removeClass("underline");
-    $(this).addClass("underline");
+
+    // Find the link corresponding to the current section
+    var currentSection = $("section").filter(function() {
+      return $(this).offset().top <= scrollPosition + 50; // Adjust the offset as needed
+    }).last();
+
+    // Add underline to the link of the current section
+    navLinks.filter('[href="#' + currentSection.attr("id") + '"]').addClass("underline");
   });
 
   // Highlight the current page's link initially

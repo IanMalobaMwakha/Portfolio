@@ -42,29 +42,23 @@
     100% { transform: translateY(-20px); }
 }
 
-.button {
-    background-color: inherit;
-    border: none;
-    color: black;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+.btn-get-started {
+    letter-spacing: 1px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 28px;
+    font-family: Poppins,sans-serif;
     font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    height: 50px; 
-  }
-  
-  .button1 {
-    background-color: black; 
-    color: whitesmoke; 
-    border: 2px solid whitesmoke;
-    border-radius: 10px;
-  }
+    font-weight: 500;
+    transition: all .5s;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px;
+}
 
-  .button1:hover {
+  .btn-get-started:hover {
     background-color: whitesmoke;
     color: rgb(55, 10, 139);
   }
@@ -94,6 +88,9 @@
     font-size: 16px;
     margin-bottom: 0.6rem;
     padding-left: 3%;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: -10px;
 }
 
 /* Skills section */
@@ -117,6 +114,10 @@ body {
     color: white;
 
 }
+
+a {
+    text-decoration: none;
+  }
 
 .logo {
     font-size: 30px !important;

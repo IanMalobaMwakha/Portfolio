@@ -17,12 +17,11 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from core.views import index, about, skills
+from core.views import index, about
 from django.contrib import admin
 
 urlpatterns = [
     path('', index, name='index'),
     path('about/', about, name='about'),
-    path('skills/', skills, name='skills'),
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

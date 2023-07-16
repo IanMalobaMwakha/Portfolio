@@ -13,16 +13,3 @@ class About(models.Model):
 
 
 
-class Skill(models.Model):
-    SKILL_TYPE_CHOICES = (
-        ('professional', 'Professional'),
-        ('personal', 'Personal'),
-    )
-
-    name = models.CharField(max_length=100)
-    skill_type = models.CharField(max_length=20, choices=SKILL_TYPE_CHOICES)
-    parent_skill = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True, related_name='subskills')
-
-    def __str__(self):
-        return self.name
-

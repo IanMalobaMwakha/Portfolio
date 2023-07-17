@@ -24,7 +24,7 @@ def about(request):
     })
 
 
-def skills(request):
+def myskills(request):
     skills = Skill.objects.all()
     skillcategories = SkillCategory.objects.all()
 

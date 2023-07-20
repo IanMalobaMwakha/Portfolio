@@ -103,51 +103,66 @@
 
 <!-- Skills section -->
 
+
+
+
+
+
+
+
+<style>
+  /* Custom CSS to adjust spacing and centering */
+  .custom-row {
+    justify-content: center;
+  }
+
+  .custom-col {
+    padding: 1.5rem; /* Adjust the padding as needed */
+    text-align: center; /* Center the content within each column */
+  }
+
+  .custom-category {
+    margin-bottom: 1.5rem; /* Adjust the margin as needed */
+    margin-top: 0; /* Remove any top margin */
+  }
+
+  .skills {
+    margin: 0.5rem 0; /* Adjust the margin between individual skills */
+  }
+</style>
+
 <section id="Skills">
-<br>
-<br>
-<br>
-<br>
-<br>
-<h2><span class="text-underline">SKILLS</span></h2>
-<div class="skills-container mt-5">
-  <div class="row justify-content-between">
-    <div class="col-sm-6 col-md-6">
-      <div class="container">
-        {% for skillcategory in skillcategories %}
-          {% if forloop.counter0|divisibleby:2 %}
-            <div class="row">
+  <h2><span class="text-underline">SKILLS</span></h2>
+  <div class="skills-container mt-5">
+    <div class="row custom-row">
+      {% for skillcategory in skillcategories %}
+        <div class="col-md-6 col-12 custom-col">
+          <p class="custom-category">{{ skillcategory.name }}</p>
+          {% if skillcategory.skills.exists %}
+            {% for skill in skillcategory.skills.all %}
+              <p class="skills">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="#4ed4c2" d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"/>
+                </svg>
+                {{ skill.name }}
+              </p>
+            {% endfor %}
+          {% else %}
+            <p>*********</p>
           {% endif %}
-          <div class="col-md-6">
-            <p>{{ skillcategory.name }}</p>
-            {% if skillcategory.skills.exists %}
-              <ul>
-                <p>
-                  {% for skill in skillcategory.skills.all %}
-                </p>
-                  <p class="skills">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path fill="#4ed4c2" d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"/>
-                    </svg>
-                    {{ skill.name }}
-                  </p>
-                {% endfor %}
-              </ul>
-            {% else %}
-              <p>*********</p>
-            {% endif %}
-          </div>
-          {% if forloop.counter|divisibleby:2 or forloop.last %}
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
-</div>
-<br>
-
-
+  </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 

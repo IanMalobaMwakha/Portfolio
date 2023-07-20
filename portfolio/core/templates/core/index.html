@@ -103,35 +103,44 @@
 
 <!-- Skills section -->
 
-
 <section id="Skills">
 <br>
 <br>
-
 <br>
 <br>
 <br>
 <h2><span class="text-underline">SKILLS</span></h2>
-<div class="about-container mt-5">
-  <div class="row justify-content-between align-items-center">
-    <div class="col-sm-6 col-md-6 text-center">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <div>
-              {% for skillcategory in skillcategories %}
-              <p>{{ skillcategory.name }}</p>
-                {% if skillcategory.skills.exists %}
-                  <ul>
-                    {% for skill in skillcategory.skills.all %}
-                      <li>{{ skill.name }}</li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              {% endfor %}
-            </div>
+<div class="skills-container mt-5">
+  <div class="row justify-content-between">
+    <div class="col-sm-6 col-md-6">
+      <div class="container">
+        {% for skillcategory in skillcategories %}
+          {% if forloop.counter0|divisibleby:2 %}
+            <div class="row">
+          {% endif %}
+          <div class="col-md-6">
+            <p>{{ skillcategory.name }}</p>
+            {% if skillcategory.skills.exists %}
+              <ul>
+                <p>
+                  {% for skill in skillcategory.skills.all %}
+                </p>
+                  <p class="skills">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#4ed4c2" d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"/>
+                    </svg>
+                    {{ skill.name }}
+                  </p>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>*********</p>
+            {% endif %}
           </div>
-        </div>
+          {% if forloop.counter|divisibleby:2 or forloop.last %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 </div>
@@ -139,6 +148,9 @@
 
 
 </section>
+
+
+
 
 
 

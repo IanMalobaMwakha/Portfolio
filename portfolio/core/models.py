@@ -10,7 +10,7 @@ class Home(models.Model):
     def __str__(self):
         return self.name
 
-# ABOUT   
+# ABOUT  
 class About(models.Model):
     unofficial_image = models.ImageField(upload_to='about_images', blank=True, null=True)
 

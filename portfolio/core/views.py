@@ -8,28 +8,18 @@ def index(request):
     background_image = Home.objects.get()
     name = Home.objects.get()
     official_image = Home.objects.get()
+    unofficial_image = About.objects.get()
+    skills = Skill.objects.all()
+    skillcategories = SkillCategory.objects.all()
+
 
     return render(request, 'core/index.html', {
         'background_image': background_image,
         'name': name,
         'official_image': official_image,
-    })
-
-
-def about(request):
-    unofficial_image = About.objects.all()
-
-    return render(request, 'core/index.html', {
         'unofficial_image': unofficial_image,
-    })
-
-
-def myskills(request):
-    skills = Skill.objects.all()
-    skillcategories = SkillCategory.objects.all()
-
-    return render(request, 'core/index.html', {
         'skills': skills,
         'skillcategories': skillcategories,
     })
+
 

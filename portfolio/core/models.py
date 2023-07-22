@@ -54,4 +54,11 @@ class Education(models.Model):
     def __str__(self):
         return self.major_name
 
+class Experience(models.Model):
+    work_name = models.CharField(max_length=255)
+    work_mode = models.CharField(max_length=255)
+    company_name = models.CharField(max_length=255)
+    company_location = models.CharField(max_length=255, null=True, blank=True)
+    work_description = models.TextField()
+
 

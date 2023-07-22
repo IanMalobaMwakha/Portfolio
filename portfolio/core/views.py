@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 
 
-from .models import Home, About, Skill, SkillCategory, Resume
+from .models import Home, About, Skill, SkillCategory, Education
 
 def index(request):
     #Home
@@ -14,10 +14,10 @@ def index(request):
     skills = Skill.objects.all()
     skillcategories = SkillCategory.objects.all()
     #Resume
-    major_name = Resume.objects.all()
-    school_name = Resume.objects.all()
-    school_location = Resume.objects.all()
-    time_period = Resume.objects.all()
+    major_name = Education.objects.all()
+    school_name = Education.objects.all()
+    school_location = Education.objects.all()
+    time_period = Education.objects.all()
 
 
     return render(request, 'core/index.html', {

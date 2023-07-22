@@ -10,14 +10,14 @@ class Home(models.Model):
         return self.name
     
     class Meta:
-        verbose_name_plural = "Home"
+        verbose_name_plural = "Home Section"
 
 # ABOUT  
 class About(models.Model):
     unofficial_image = models.ImageField(upload_to='about_images', blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = "About"
+        verbose_name_plural = "About Section"
 
 # SKILLS
 
@@ -25,7 +25,7 @@ class SkillCategory(models.Model):
     name = models.CharField(max_length=255, null=True)
 
     class Meta:
-        verbose_name_plural = "Skill Categories"
+        verbose_name_plural = "Skill Section: Skill Categories"
 
     def __str__(self):
         return self.name
@@ -34,18 +34,22 @@ class Skill(models.Model):
     name = models.CharField(max_length=255)
     skillcategory = models.ForeignKey(SkillCategory, related_name='skills', null=True, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name_plural = "Skill Section: Skills"
+
     def __str__(self):
         return self.name
+    
 
 # RESUME
-class Resume(models.Model):
+class Education(models.Model):
     major_name = models.CharField(max_length=255)
     school_name = models.CharField(max_length=255)
     school_location = models.CharField(max_length=255)
     time_period = models.CharField(max_length=255)
 
     class Meta:
-        verbose_name_plural = "Resume"
+        verbose_name_plural = "Resume Section: Education"
 
     def __str__(self):
         return self.major_name

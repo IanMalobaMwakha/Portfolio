@@ -60,5 +60,12 @@ class Experience(models.Model):
     company_name = models.CharField(max_length=255)
     company_location = models.CharField(max_length=255, null=True, blank=True)
     work_description = models.TextField()
+    period = models.Model()
+
+    class Meta:
+        verbose_name_plural = "Resume Section: Work Experience"
+
+    def __str__(self):
+        return self.work_name
 
 

@@ -33,13 +33,23 @@ def index(request):
     return render(request, 'core/index.html', {
         'name': name,
         'official_image': official_image,
+
         'unofficial_image': unofficial_image,
+
         'skills': skills,
         'skillcategories': skillcategories,
+
         'major_name': major_name,
         'school_name': school_name,
         'school_location': school_location,
         'time_period': time_period,
+
+        'work_name': work_name,
+        'work_mode': work_mode,
+        'company_name': company_name,
+        'company_location': company_location,
+        'work_description': work_description,
+        'period': period,
     })
 
 

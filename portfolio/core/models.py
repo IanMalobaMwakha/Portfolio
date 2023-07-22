@@ -38,10 +38,10 @@ class Skill(models.Model):
         return self.name
 
 # RESUME
-def Resume(models.Model):
+class Resume(models.Model):
     major_name = models.CharField(max_length=255)
     school_name = models.CharField(max_length=255)
-    school_location = models.CharFiled(max_length=255)
+    school_location = models.CharField(max_length=255)
     time_period = models.CharField(max_length=255)
 
     class Meta:

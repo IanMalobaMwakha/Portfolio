@@ -8,10 +8,16 @@ class Home(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name_plural = "Home"
 
 # ABOUT  
 class About(models.Model):
     unofficial_image = models.ImageField(upload_to='about_images', blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "About"
 
 # SKILLS
 
@@ -31,6 +37,14 @@ class Skill(models.Model):
     def __str__(self):
         return self.name
 
+# RESUME
+def Resume(models.Model):
+    major_name = models.CharField(max_length=255)
+    school_name = models.CharField(max_length=255)
+    school_location = models.CharFiled(max_length=255)
+    time_period = models.CharField(max_length=255)
 
+    class Meta:
+        verbose_name_plural = "Resume"
 
 

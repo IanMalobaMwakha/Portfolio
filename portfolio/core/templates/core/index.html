@@ -157,22 +157,6 @@
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br>
 <br>
 <br>
@@ -204,22 +188,7 @@
         </p>
     {% endfor %}
     <h3><u>Work Experience</u></h3>
-    {% for work in work_name %}
-        <p>
-          <h4>{{ work.work_name }}</h4>
-          {{ work.company_name }}
-          <br>
-          {% if work.company_location %}
-          {{ work.company_location }}
-          {% endif %}
-          <br>
-          {{ work.period }}
-          <br>
-          {{ work.work_mode }}
-          <br>
-          {{ work.company_description }}
-        </p>
-    {% endfor %}
+
 
 
 
@@ -247,13 +216,34 @@
     overflow: hidden;
     background-color: #f1f1f1;
   }
+  .work_description {
+    color: black;
+  }
   </style>
   
-  
-  <button type="button" class="collapsible">Open Collapsible</button>
+  {% for work in work_name %}
+<button type="button" class="collapsible">
+<h4>{{ work.work_name }}</h4>
+    {{ work.company_name }}
+    <br>
+    {% if work.company_location %}
+      {{ work.company_location }}
+    {% endif %}
+    <br>
+    {{ work.period }}
+    <br>
+    {{ work.work_mode }}
+</button>
   <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="work_description">
+      <br>
+      <br>
+      {{ work.work_description }}
+    </p>
   </div>
+  <br>
+{% endfor %}
+  <br>
   
   
   

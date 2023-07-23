@@ -1,4 +1,10 @@
 
+.icon-wrapper {
+    border-radius: 20% !important;
+    overflow: hidden !important;
+}
+
+
 /* Home section */
 .Home {
     width: 100%;

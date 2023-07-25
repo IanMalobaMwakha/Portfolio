@@ -209,7 +209,7 @@
   }
   
   .active, .collapsible:hover {
-    background-color: #555;
+    background-color: #23ccbe; transition: 1s;
   }
   
   .content {
@@ -350,7 +350,7 @@ html,
 }
 
 .nav div.logo a:hover {
-    color: #34d857;
+    color: #34d857; transition: 0.5s !important;
 }
 
 .nav div.main_list {
@@ -376,14 +376,14 @@ html,
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: whitesmoke;
     line-height: 65px;
     font-size: 2.4rem;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
-    text-decoration: underline 0.4s ease;
+    color: #dbee2e;
+    text-decoration: underline 1s ease; transition: 1s;
 
 }
 
@@ -403,7 +403,7 @@ html,
   }
 
   #mainListDiv .navlinks .nav-link:hover {
-    text-decoration: underline  4px solid !important; 
+    text-decoration: underline  4px solid !important;
   }
   
   #mainListDiv .navlinks .nav-link {

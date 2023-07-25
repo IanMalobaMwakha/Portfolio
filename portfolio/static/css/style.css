@@ -124,6 +124,9 @@
 }
 
 /* Skills section */
+.Skills {
+    margin-top: 25%;
+}
 .skills-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -134,21 +137,21 @@
 }
 
 .skills {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 0.6rem;
     padding-left: 3%;
     text-align: justify;
-    padding-left: 10px;
-    padding-right: -10px;
+    padding-left: 65px;
+    font-weight: bold;
+    color: aliceblue;
 }
 
-.about-description {
-    font-size: 16px;
-    margin-bottom: 0.6rem;
-    padding-left: 3%;
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: -10px;
+.custom-category {
+    font-size: 26px !important;
+    padding-left: 65px;
+    font-weight: 90%;
+    font-weight: bolder;
+    color: rgb(132, 207, 46);
 }
 
 /* Resume section */

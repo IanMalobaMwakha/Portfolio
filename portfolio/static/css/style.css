@@ -124,9 +124,7 @@
 }
 
 /* Skills section */
-.Skills {
-    margin-top: 25%;
-}
+
 .skills-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -221,6 +219,9 @@ a {
 #Contact,
 #Blogs {
     height: auto;
+    padding-top: 100px !important;
+    padding-bottom: 20px;
+
 }
 
 html {

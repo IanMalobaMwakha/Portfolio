@@ -21,6 +21,7 @@ def index(request):
     school_name = Education.objects.all()
     school_location = Education.objects.all()
     time_period = Education.objects.all()
+    education_description = Education.objects.all()
 
     work_name = Experience.objects.all()
     work_mode = Experience.objects.all()
@@ -43,6 +44,7 @@ def index(request):
         'school_name': school_name,
         'school_location': school_location,
         'time_period': time_period,
+        'education_description': education_description,
 
         'work_name': work_name,
         'work_mode': work_mode,

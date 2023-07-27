@@ -47,6 +47,7 @@ class Education(models.Model):
     school_name = models.CharField(max_length=255)
     school_location = models.CharField(max_length=255)
     time_period = models.CharField(max_length=255)
+    education_description = models.TextField(m)
 
     class Meta:
         verbose_name_plural = "Resume Section: Education"

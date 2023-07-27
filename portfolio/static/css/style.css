@@ -221,6 +221,13 @@
   .work_description {
     color: black;
   }
+
+  .resume-title {
+    font-size: 26px !important;
+    font-weight: 90%;
+    font-weight: bolder;
+    color: rgb(132, 207, 46);
+  }
 /* Projects section */
 
 

@@ -121,18 +121,23 @@
     <a href="#" class="btn-cv-download-resume" target="_blank">View CV</a>
     <h3 class="resume-title">EDUCATION</h3>
     {% for major in major_name %}
-        <p>
-          <h4>{{ major.major_name }}</h4>
+    <button type="button" class="collapsible">
+      <h4>{{ major.major_name }}</h4>
           {{ major.school_name }}
           <br>
           {{ major.school_location }}
           <br>
           {{ major.time_period }}
-          <br>
+    </button>
+          
+    <div class="content">
+      <p class="work_description">
           {{ major.education_description }}
-        </p>
+      </p>
+    </div>
     {% endfor %}
     <h3 class="resume-title">WORK EXPERIENCE</h3>
+
 
 
   

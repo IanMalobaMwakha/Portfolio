@@ -193,7 +193,7 @@
   }
 
 
-  .collapsible {
+  .education-collapsible {
     background-color: #691699;
     color: white;
     cursor: pointer;
@@ -208,19 +208,63 @@
     padding: -10px;
   }
   
-  .active, .collapsible:hover {
+  .active, .education-collapsible:hover {
     background-color: #23ccbe; transition: 1s;
   }
   
-  .content {
+  .education-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
   }
-  .work_description {
+  .education-description {
     color: black;
   }
+
+
+
+
+
+
+  .work-collapsible {
+    background-color: #691699;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 50px;
+    margin: 10px;
+    padding: -10px;
+  }
+  
+  .active, .work-collapsible:hover {
+    background-color: #23ccbe; transition: 1s;
+  }
+  
+  .work-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .work-description {
+    color: black;
+  }
+
+
+
+
+
+
+
+
+
+
 
   .resume-title {
     font-size: 26px !important;
@@ -231,6 +275,9 @@
     padding-top: 80px;
     padding-bottom: 18px;
   }
+
+
+
 /* Projects section */
 
 

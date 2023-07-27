@@ -5,7 +5,7 @@
 }
 
 
-/* Home section */
+/* HOME section */
 .Home {
     width: 100%;
     height: 120vh;
@@ -72,7 +72,7 @@
   
 
 
-/* About section */
+/* ABOUT section */
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -122,7 +122,10 @@
   
 }
 
-/* Skills section */
+
+
+
+/* SKILLS section */
 
 .skills-container {
     max-width: 1000px;
@@ -151,7 +154,11 @@
     color: rgb(132, 207, 46);
 }
 
-/* Resume section */
+
+
+
+
+/* RESUME section */
 .btn-cv-download-resume {
     letter-spacing: 1px;
     color: #fff;
@@ -192,7 +199,7 @@
     }
   }
 
-
+/* education collapsible */
   .education-collapsible {
     background-color: #691699;
     color: white;
@@ -222,11 +229,21 @@
     color: black;
   }
 
+ 
+  .education-table {
+    width: 100%;
+  }
+
+  .school-location {
+    text-align: right;
+  }
+
+  .school-name {
+    text-align: right;
+  }
 
 
-
-
-
+/* work collapsible */
   .work-collapsible {
     background-color: #691699;
     color: white;
@@ -255,17 +272,7 @@
   .work-description {
     color: black;
   }
-
-
-
-
-
-
-
-
-
-
-
+/* the two titles edu & work */
   .resume-title {
     font-size: 26px !important;
     font-weight: 90%;
@@ -278,13 +285,15 @@
 
 
 
-/* Projects section */
 
 
-/* Contact section */
+/* PROJECTS section */
 
 
-/* Blogs section */
+/* CONTACT section */
+
+
+/* BlLOGS section */
 
 
 /* ...GENERALS..  */

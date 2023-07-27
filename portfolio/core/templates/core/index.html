@@ -122,12 +122,18 @@
     <h3 class="resume-title">EDUCATION</h3>
       {% for major in major_name %}
       <button type="button" class="education-collapsible">
-        <h4>{{ major.major_name }}</h4>
-            {{ major.school_name }}
-            <br>
-            {{ major.school_location }}
-            <br>
-            {{ major.time_period }}
+        <table class="education-table">
+          <tr>
+            <td><h4>{{ major.major_name }}</h4></td>
+            <td><p class="school-name">{{ major.school_name }}</p></td>
+          </tr>
+          <tr>
+            <td>{{ major.school_location }}</td>
+            <td><p class="school-location"><i>{{ major.time_period }}</i></p></td>
+          </tr>
+        </table>
+
+            
       </button>
             
       <div class="education-content">

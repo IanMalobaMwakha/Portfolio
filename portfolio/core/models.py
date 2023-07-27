@@ -47,7 +47,7 @@ class Education(models.Model):
     school_name = models.CharField(max_length=255)
     school_location = models.CharField(max_length=255)
     time_period = models.CharField(max_length=255)
-    education_description = models.TextField()
+    education_description = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Resume Section: Education"
@@ -60,7 +60,7 @@ class Experience(models.Model):
     work_mode = models.CharField(max_length=255)
     company_name = models.CharField(max_length=255)
     company_location = models.CharField(max_length=255, null=True, blank=True)
-    work_description = models.TextField()
+    work_description = models.TextField(null=   True, blank=True)
     period = models.CharField(max_length=255)
 
     class Meta:

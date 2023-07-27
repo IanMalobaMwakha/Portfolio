@@ -120,81 +120,81 @@
     <a href="#" download="#" class="btn-cv-download-resume" target="_blank">Download My Resume</a>
     <a href="#" class="btn-cv-download-resume" target="_blank">View CV</a>
     <h3 class="resume-title">EDUCATION</h3>
-    {% for major in major_name %}
-    <button type="button" class="education-collapsible">
-      <h4>{{ major.major_name }}</h4>
-          {{ major.school_name }}
+      {% for major in major_name %}
+      <button type="button" class="education-collapsible">
+        <h4>{{ major.major_name }}</h4>
+            {{ major.school_name }}
+            <br>
+            {{ major.school_location }}
+            <br>
+            {{ major.time_period }}
+      </button>
+            
+      <div class="education-content">
+        <p class="education-description">
+            {{ major.education_description }}
+        </p>
+      </div>
+      {% endfor %}
+      <script>
+        var coll = document.getElementsByClassName("education-collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+
+
+
+          <h3 class="resume-title">WORK EXPERIENCE</h3>
+        {% for work in work_name %}
+      <button type="work-button" class="work-collapsible">
+      <h4>{{ work.work_name }}</h4>
+          {{ work.company_name }}
           <br>
-          {{ major.school_location }}
+          {% if work.company_location %}
+            {{ work.company_location }}
+          {% endif %}
           <br>
-          {{ major.time_period }}
-    </button>
-          
-    <div class="education-content">
-      <p class="education-description">
-          {{ major.education_description }}
-      </p>
-    </div>
-    {% endfor %}
-    <script>
-      var coll = document.getElementsByClassName("education-collapsible");
-      var i;
-      
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-      </script>
-
-
-
-
-    <h3 class="resume-title">WORK EXPERIENCE</h3>
-  {% for work in work_name %}
-<button type="work-button" class="collapsible">
-<h4>{{ work.work_name }}</h4>
-    {{ work.company_name }}
-    <br>
-    {% if work.company_location %}
-      {{ work.company_location }}
-    {% endif %}
-    <br>
-    {{ work.period }}
-    <br>
-    {{ work.work_mode }}
-</button>
-  <div class="work-content">
-    <p class="work-description">
-      <br>
-      <br>
-      {{ work.work_description }}
-    </p>
-  </div>
-  <br>
-{% endfor %}    
-  <script>
-  var coll = document.getElementsByClassName("work-collapsible");
-  var i;
-  
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-  </script>
+          {{ work.period }}
+          <br>
+          {{ work.work_mode }}
+      </button>
+        <div class="work-content">
+          <p class="work-description">
+            <br>
+            <br>
+            {{ work.work_description }}
+          </p>
+        </div>
+        <br>
+      {% endfor %}    
+        <script>
+        var coll = document.getElementsByClassName("work-collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
   
   
   

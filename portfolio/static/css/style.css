@@ -200,7 +200,7 @@
   }
 
 /* education collapsible */
-  .education-collapsible {
+.education-collapsible {
     background-color: #691699;
     color: white;
     cursor: pointer;
@@ -224,7 +224,11 @@
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #cc8686;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
   }
   .education-description {
     color: black;

@@ -205,13 +205,19 @@
     color: white;
     cursor: pointer;
     padding: 5px;
-    width: 100%;
+    width: 80%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
     border-radius: 25px;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .overall-education-table {
+    margin: 0 auto !important;
   }
   
   .active, .education-collapsible:hover {

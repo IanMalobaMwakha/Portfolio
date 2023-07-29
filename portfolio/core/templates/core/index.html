@@ -121,13 +121,7 @@
     <a href="#" class="btn-cv-download-resume" target="_blank">View CV</a>
     
     <h3 class="resume-title">EDUCATION</h3>
-      {% for major in major_name %}
-      <table>
-        <tr class="overall-education-table">
-          <td>
-            TT
-          </td>
-          <td>
+    {% for major in major_name %}
             <button type="button" class="education-collapsible">
               <table class="education-table">
                 <tr>
@@ -140,17 +134,13 @@
                 </tr>
               </table>  
             </button>
-          </td>
-        </tr>
-      </table>
-      
-            
+                
       <div class="education-content">
         <p class="education-description">
             {{ major.education_description }}
         </p>
       </div>
-      {% endfor %}
+    {% endfor %}
       <script>
         var coll = document.getElementsByClassName("education-collapsible");
         var i;
@@ -166,13 +156,13 @@
             }
           });
         }
-        </script>
+      </script>
 
 
 
 
-          <h3 class="resume-title">WORK EXPERIENCE</h3>
-        {% for work in work_name %}
+      <h3 class="resume-title">WORK EXPERIENCE</h3>
+      {% for work in work_name %}
       <button type="work-button" class="work-collapsible">
       <h4>{{ work.work_name }}</h4>
           {{ work.company_name }}

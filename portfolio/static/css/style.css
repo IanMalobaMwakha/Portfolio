@@ -216,9 +216,7 @@
     margin-right: auto;
   }
 
-  .overall-education-table {
-    margin: 0 auto !important;
-  }
+
   
   .active, .education-collapsible:hover {
     background-color: black; transition: 1s;

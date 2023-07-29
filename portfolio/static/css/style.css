@@ -257,6 +257,16 @@
     text-align: right;
   }
 
+  .major-time-period {
+    text-align: center !important;
+    background-color: #23ccbe;
+    color: #000;
+    border-radius: 4px;
+    width: 100px;
+    font-weight:500;
+    margin-left: auto;
+
+  }
 
 /* work collapsible */
   .work-collapsible {

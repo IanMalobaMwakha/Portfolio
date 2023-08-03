@@ -48,9 +48,11 @@ class Education(models.Model):
     school_location = models.CharField(max_length=255)
     time_period = models.CharField(max_length=255)
     education_description = models.TextField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name_plural = "Resume Section: Education"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.major_name
@@ -62,9 +64,11 @@ class Experience(models.Model):
     company_location = models.CharField(max_length=255, null=True, blank=True)
     work_description = models.TextField(null=   True, blank=True)
     period = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name_plural = "Resume Section: Work Experience"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.work_name

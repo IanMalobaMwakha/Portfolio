@@ -125,7 +125,7 @@
   {% for major in major_name %}
     <div>
       <span>
-        <iconify-icon icon="gis:arrow" style="color: red;" width="30" flip="horizontal"></iconify-icon>
+        <iconify-icon icon="gis:arrow" style="color: rgb(97, 123, 196);" width="30" flip="horizontal"></iconify-icon>
       </span>
 
       <button type="button" class="education-collapsible">
@@ -139,7 +139,7 @@
                 <td><p class="major-time-period"><i>{{ major.time_period }}</i></p></td>
             </tr>
         </table>  
-    </button>       
+      </button>       
       <div class="education-content">
           <p class="education-description">
               {{ major.education_description }}
@@ -171,26 +171,29 @@
 
       <h3 class="resume-title">WORK EXPERIENCE</h3>
       {% for work in work_name %}
-      <button type="work-button" class="work-collapsible">
-      <h4>{{ work.work_name }}</h4>
-          {{ work.company_name }}
-          <br>
-          {% if work.company_location %}
-            {{ work.company_location }}
-          {% endif %}
-          <br>
-          {{ work.period }}
-          <br>
-          {{ work.work_mode }}
-      </button>
-        <div class="work-content">
-          <p class="work-description">
-            <br>
-            <br>
-            {{ work.work_description }}
-          </p>
+        <div>
+          <span>
+            <iconify-icon icon="gis:arrow" style="color: rgb(79, 92, 212);" width="30" flip="horizontal"></iconify-icon>
+          </span>
+    
+          <button type="button" class="work-collapsible">
+            <table class="education-table">
+                <tr>
+                    <td><h4 class="major-name">{{ work.work_name }}</h4></td>
+                    <td><p class="school-name"><i>{{ work.company_name }}</i></p></td>
+                </tr>
+                <tr>
+                    <td><p class="school-location">{{ work.period }} (<i>{{ work.work_mode }}</i>)</p></td>
+                    <td><p class="major-time-period">{{ work.company_location }}</p></td>
+                </tr>
+            </table>  
+          </button>       
+          <div class="education-content">
+              <p class="education-description">
+                  {{ work.work_description }}
+              </p>
+          </div>
         </div>
-        <br>
       {% endfor %}    
         <script>
         var coll = document.getElementsByClassName("work-collapsible");

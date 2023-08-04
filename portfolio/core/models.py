@@ -83,4 +83,14 @@ class Project(models.Model):
     project_short_description = models.CharField(max_length=255, null=True, blank=True)
     project_description = models.TextField(null=True, blank=True)
     tools_and_lang = models.CharField(max_length=255, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    
+    class Meta:
+        verbose_name_plural = "Projects"
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.project_name
+    
     

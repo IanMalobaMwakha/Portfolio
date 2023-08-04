@@ -100,7 +100,7 @@ class Project(models.Model):
     
     class Meta:
         verbose_name_plural = "PROJECTS SECTION: Project"
-        ordering = ["-created_at"]
+        # ordering = ["-created_at"]
 
     def __str__(self):
         return self.project_name

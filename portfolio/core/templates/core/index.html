@@ -183,7 +183,7 @@
                     <td><p class="company-name"><i>{{ work.company_name }}</i></p></td>
                 </tr>
                 <tr>
-                    <td><p class="work-time-period">{{ work.company_location }} (<i>{{ work.work_mode }}</i>)</p></td>
+                    <td><p class="work-time-period"> {% if work.company_location %}{{ work.company_location }}{% endif %} (<i>{{ work.work_mode }}</i>)</p></td>
                     <td><p class="company-location">{{ work.period }}</p></td>
                 </tr>
             </table>  

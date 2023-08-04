@@ -74,3 +74,8 @@ class Experience(models.Model):
         return self.work_name
 
 
+# PROJECTS
+class Project(models.Model):
+    project_name = models.CharField(max_length=255)
+    github_link = models.CharField(max_length=255, null=True, blank=True)
+    live_link = models.CharField(max_length=255, null=True)

@@ -79,3 +79,4 @@ class Project(models.Model):
     project_name = models.CharField(max_length=255)
     github_link = models.CharField(max_length=255, null=True, blank=True)
     live_link = models.CharField(max_length=255, null=True)
+    project_image = models.ImageField(upload_to='project_images')

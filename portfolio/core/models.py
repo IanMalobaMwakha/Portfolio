@@ -10,14 +10,14 @@ class Home(models.Model):
         return self.name
     
     class Meta:
-        verbose_name_plural = "Home Section"
+        verbose_name_plural = "HOME SECTION"
 
 # ABOUT  
 class About(models.Model):
     unofficial_image = models.ImageField(upload_to='about_images', blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = "About Section"
+        verbose_name_plural = "ABOUT SECTION"
     
     def __str__(self):
         return "Unofficial Image"
@@ -28,7 +28,7 @@ class SkillCategory(models.Model):
     name = models.CharField(max_length=255, null=True)
 
     class Meta:
-        verbose_name_plural = "Skill Section: Skill Categories"
+        verbose_name_plural = "SKILL SECTION: Skill Categories"
 
     def __str__(self):
         return self.name
@@ -38,7 +38,7 @@ class Skill(models.Model):
     skillcategory = models.ForeignKey(SkillCategory, related_name='skills', null=True, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name_plural = "Skill Section: Skills"
+        verbose_name_plural = "SKILL SECTION: Skills"
 
     def __str__(self):
         return self.name
@@ -54,7 +54,7 @@ class Education(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     class Meta:
-        verbose_name_plural = "Resume Section: Education"
+        verbose_name_plural = "RESUME SECTION: Education"
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -70,7 +70,7 @@ class Experience(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     class Meta:
-        verbose_name_plural = "Resume Section: Work Experience"
+        verbose_name_plural = "RESUME SECTION: Work Experience"
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -82,7 +82,7 @@ class ToolsUsed(models.Model):
     tools_name = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name_plural = "Projects Section: Tools and Technologies Used"
+        verbose_name_plural = "PROJECTS SECTION: Tools and Technologies Used"
 
     def __str__(self):
         return self.tools_name
@@ -99,7 +99,7 @@ class Project(models.Model):
 
     
     class Meta:
-        verbose_name_plural = "Projects Section: Project"
+        verbose_name_plural = "PROJECTS SECTION: Project"
         ordering = ["-created_at"]
 
     def __str__(self):

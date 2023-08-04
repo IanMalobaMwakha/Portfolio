@@ -18,6 +18,9 @@ class About(models.Model):
 
     class Meta:
         verbose_name_plural = "About Section"
+    
+    def __str__(self):
+        return "Unofficial Image"
 
 # SKILLS
 
@@ -75,6 +78,15 @@ class Experience(models.Model):
 
 
 # PROJECTS
+class ToolsUsed(models.Model):
+    name = models.CharField(max_length=100, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = "Projects Section: Tools and Technologies Used"
+
+    def __str__(self):
+        return self.project_name
+
 class Project(models.Model):
     project_name = models.CharField(max_length=255)
     github_link = models.CharField(max_length=255, null=True, blank=True)
@@ -82,15 +94,14 @@ class Project(models.Model):
     project_image = models.ImageField(upload_to='project_images', blank=True, null=True)
     project_short_description = models.CharField(max_length=255, null=True, blank=True)
     project_description = models.TextField(null=True, blank=True)
-    tools_and_lang = models.CharField(max_length=255, blank=True, null=True)
+    tools_and_lang = models.ManyToManyField(ToolsUsed, max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     
     class Meta:
-        verbose_name_plural = "Projects"
+        verbose_name_plural = "Projects Section: Project"
         ordering = ["-created_at"]
 
     def __str__(self):
         return self.project_name
-    
     

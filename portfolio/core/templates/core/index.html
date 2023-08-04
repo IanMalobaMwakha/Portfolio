@@ -177,19 +177,19 @@
           </span>
     
           <button type="button" class="work-collapsible">
-            <table class="education-table">
+            <table class="work-table">
                 <tr>
-                    <td><h4 class="major-name">{{ work.work_name }}</h4></td>
-                    <td><p class="school-name"><i>{{ work.company_name }}</i></p></td>
+                    <td><h4 class="work-name">{{ work.work_name }}</h4></td>
+                    <td><p class="company-name"><i>{{ work.company_name }}</i></p></td>
                 </tr>
                 <tr>
-                    <td><p class="school-location">{{ work.period }} (<i>{{ work.work_mode }}</i>)</p></td>
-                    <td><p class="major-time-period">{{ work.company_location }}</p></td>
+                    <td><p class="work-time-period">{{ work.period }} (<i>{{ work.work_mode }}</i>)</p></td>
+                    <td><p class="company-location">{{ work.company_location }}</p></td>
                 </tr>
             </table>  
           </button>       
-          <div class="education-content">
-              <p class="education-description">
+          <div class="work-content">
+              <p class="work-description">
                   {{ work.work_description }}
               </p>
           </div>

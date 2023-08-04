@@ -79,13 +79,13 @@ class Experience(models.Model):
 
 # PROJECTS
 class ToolsUsed(models.Model):
-    name = models.CharField(max_length=100, null=True, blank=True)
+    tools_name = models.CharField(max_length=100, blank=True)
 
     class Meta:
         verbose_name_plural = "Projects Section: Tools and Technologies Used"
 
     def __str__(self):
-        return self.project_name
+        return self.tools_name
 
 class Project(models.Model):
     project_name = models.CharField(max_length=255)

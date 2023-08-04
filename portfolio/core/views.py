@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 
 
-from .models import Home, About, Skill, SkillCategory, Education, Experience, Project
+from .models import Home, About, Skill, SkillCategory, Education, Experience, ToolsUsed, Project
 
 def index(request):
     #Home
@@ -38,6 +38,8 @@ def index(request):
     project_short_description = Project.objects.all()
     project_description = Project.objects.all()
     tools_and_lang = Project.objects.all()
+    tools_name = ToolsUsed.objects.all()
+
 
 
     return render(request, 'core/index.html', {
@@ -69,6 +71,7 @@ def index(request):
         'project_short_description': project_short_description,
         'project_description': project_description,
         'tools_and_lang': tools_and_lang,
+        'tools_name': tools_name,
 
     })
 

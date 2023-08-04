@@ -79,7 +79,7 @@ class Experience(models.Model):
 
 # PROJECTS
 class ToolsUsed(models.Model):
-    tools_name = models.CharField(max_length=100, blank=True)
+    tools_name = models.CharField(max_length=100)
 
     class Meta:
         verbose_name_plural = "Projects Section: Tools and Technologies Used"
@@ -94,7 +94,7 @@ class Project(models.Model):
     project_image = models.ImageField(upload_to='project_images', blank=True, null=True)
     project_short_description = models.CharField(max_length=255, null=True, blank=True)
     project_description = models.TextField(null=True, blank=True)
-    tools_and_lang = models.ManyToManyField(ToolsUsed, max_length=255, blank=True, null=True)
+    tools_and_lang = models.ManyToManyField(ToolsUsed, max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     

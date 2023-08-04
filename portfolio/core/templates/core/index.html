@@ -231,38 +231,31 @@
 <div class="about-container mt-5">
   <div class="row justify-content-between align-items-center">
     <div class="col-sm-6 col-md-6 text-center">
-      <br>
-        
-      <p class="about-description">
-        Hello, I'm Ian Mwakha Maloba, a Software Engineer and Full Stack Web Developer based in Nairobi, Kenya. With a passion
-        for computers and programming, I embarked on my journey in early 2021. Since then, I've gained 
-        knowledge in a wide range of technologies and acquired practical experience in building real-world software.
-      </p>
-      <br>
-      <p class="about-description">
-        I'm currently pursuing a dual major in BSc. Computer Science at the <a href="https://www.uopeople.edu/" target="_blank">University of the People</a> and BSc. 
-        Analytical Chemistry at the <a href="https://www.uonbi.ac.ke/" target="_blank">University of Nairobi</a>. This 
-        unique combination allows me to leverage my 
-        analytical skills in the world of technology.
-      </p>
-      <br>
-      <p class="about-description">
-        I'm open to opportunities and passionate about collaboration and finding innovative solutions. Let't connect and 
-        turn ideas into reality! 
-      </p>
-      <p>#Contact Me Button#</p>
-      <br>
-      <br>
-    </div>
-    <div class="col-sm-6 col-md-6 text-center">
-      <div class="unnoficial_picture">
+      {% for project in project_name %}
+        {{ project.project_name }}
         <br>
+        {{ project.github_link }}
         <br>
-        <img src="{{unofficial_image}}" alt="unofficial_image" style="border-radius: 5%; max-width: 100%;" height="410px" width="330px">
-      </div>
-      <br>
-      <br>
-      <br>
+        {{ project.live_link }}
+        <br>
+        <img src="{{ project.project_image.url }}" class="project-img" alt="project-image" style="border-radius: 5%;" height="300px" width="450px">
+
+        {{ project.project_image }}
+        <br>
+        {{ project.project_short_description }}
+        <br>
+        {{ project.project_description }}
+        <br>
+        <p>BELOW ARE TOOLS.... </p>
+        <ul>
+          <li>
+            {{ projet.tools_and_lang }}
+          </li>
+        </ul>
+        {{ projet.tools_and_lang }}
+      {% endfor %}
+
+
     </div>
   </div>
 </div>

@@ -472,7 +472,7 @@ html,
     padding: 0;
     box-sizing: border-box;
     font-size: 50.5%;
-    font-size: 10px;
+    font-size: 9px;
 }
 
 
@@ -538,7 +538,7 @@ html,
 }
 
 .nav div.main_list ul li a:hover {
-    color: #dbee2e;
+    color: #19d5e2;
     text-decoration: underline 1s ease; transition: 1s;
 
 }

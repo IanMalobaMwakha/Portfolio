@@ -248,20 +248,7 @@
       {% endfor %}
     </div>    
   </div>
-  <br>
-  <br>
-  <br>
-  {% for project in project_name %}
 
-  {{ project.project_description }}
-        <br>
-        <br>
-        <p><u>BELOW ARE TOOLS.... </u></p>
-
-          {% for tool_lang in project.tools_and_lang.all %}
-              <p>{{ tool_lang.tools_name }}</p>
-          {% endfor %}
-    {% endfor %}
 </div>
 </section>
 

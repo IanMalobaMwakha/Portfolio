@@ -19,8 +19,10 @@ from django.conf.urls.static import static
 from django.urls import path
 from core.views import index
 from django.contrib import admin
+from core import views
 
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
+    path('project/<int:pk>/', views.project_detail, name='project_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

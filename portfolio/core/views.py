@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 
-
+from django.shortcuts import get_object_or_404
 from .models import Home, About, Skill, SkillCategory, Education, Experience, ToolsUsed, Project
 
 def index(request):
@@ -75,3 +75,11 @@ def index(request):
 
     })
 
+
+def project_detail(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+
+    return render(request, 'core/project_detail.html', {
+        'project': project,
+        'pk': pk,
+    })

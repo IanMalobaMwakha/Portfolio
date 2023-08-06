@@ -379,7 +379,8 @@
 
 /* PROJECTS section */
 .card {
-    margin: 50px;
+    margin: 20px;
+    border-radius: 6px !important;
 }
 
 /* CONTACT section */

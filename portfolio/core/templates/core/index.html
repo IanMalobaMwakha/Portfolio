@@ -12,33 +12,36 @@
   <br>
   <br>
   <br>
-      <div class="container mt-5">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-sm-6 col-md-6 text-center">
+  <div class="container mt-5">
+      <div class="row justify-content-between align-items-center">
+          <div class="col-sm-6 col-md-6 col-lg-5 text-center"> <!-- Adjusted column classes -->
               <br>
               <br>
-              <img src="{{ official_image.official_image.url }}" class="official-img" alt="official-image" style="border-radius: 5%;" height="470px" width="360px">
-            </div>
-            <div class="col-sm-6 col-md-6 text-center">
+              <img src="{{ official_image.official_image.url }}" class="official-img img-fluid" alt="official-image" style="border-radius: 5%; max-width: 80%;" height="300px">
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-7 text-center"> <!-- Adjusted column classes -->
               <h1 class="name"> {{ name }} </h1>
               <div class="description">
-                <p class="description">I'm a <span class="auto-type"></span></p>
+                  <p class="description">I'm a <span class="auto-type"></span></p>
               </div>
               <a href="#" download="#" class="btn-cv-download" target="_blank">Download my CV</a>
               <br>
-            </div>
           </div>
       </div>
+  </div>
   <script>
-       var typed = new Typed(".auto-type", {
-        strings: ["Full Stack Developer", "Software Engineer", "Freelancer"],
-        typeSpeed: 50,
-        backSpeed: 35,
-        loop: true
-       })
+      var typed = new Typed(".auto-type", {
+          strings: ["Full Stack Developer", "Software Engineer", "Freelancer"],
+          typeSpeed: 50,
+          backSpeed: 35,
+          loop: true
+      })
   </script> 
-
 </section>
+
+
+
+
 
 
 <!-- About section-->
@@ -238,7 +241,7 @@
         <br>
         <a href="{{ project.live_link }}" target="_blank">Live Link</a>
         <br>
-        <img src="{{ project.project_image.url }}" class="project-img" alt="project-image" style="border-radius: 5%;" height="300px" width="450px">
+        <img src="{{ project.project_image.url }}" class="project-img" alt="project-image" style="border-radius: 5%;" height="240px" width="300px">
         <br>
         <b>{{ project.project_short_description }}</b>
         <br>

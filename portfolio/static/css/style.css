@@ -378,7 +378,9 @@
 
 
 /* PROJECTS section */
-
+.card {
+    margin: 50px;
+}
 
 /* CONTACT section */
 

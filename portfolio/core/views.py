@@ -76,10 +76,11 @@ def index(request):
     })
 
 
-def project_detail(request, pk):
+def project_detail(request, pk, project_name):
     project = get_object_or_404(Project, pk=pk)
 
     return render(request, 'core/project_detail.html', {
         'project': project,
         'pk': pk,
+        'project_name': project_name,
     })

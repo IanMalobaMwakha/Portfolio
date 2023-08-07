@@ -401,7 +401,15 @@
 }
 
 .btn-primary :hover {
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
+    color: black !important;
+}
+.learn-more-button {
+    background-color: black;
+    margin-right: 190px;
+}
+
+.learn-more-button :hover {
     color: black;
 }
 /* CONTACT section */

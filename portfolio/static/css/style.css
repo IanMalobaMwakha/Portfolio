@@ -384,23 +384,41 @@
 .card-title {
     font-size: 25px !important;
 }
-.btn {
-    font-size: 18px;
-    color: whitesmoke;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .btn-primary {
     background-color: blue;
-
+    font-size: 18px;
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
 .github-button {
     margin-right: 40px;
-
 }
+
 .live-button {
     margin-left: 40px;
 }
+
+/* Apply smaller size on small devices */
+@media (max-width: 576px) {
+    .btn-primary {
+        font-size: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+/* Apply even smaller size on extra small devices */
+@media (max-width: 375px) {
+    .btn-primary {
+        font-size: 12px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+
 
 .btn-primary :hover {
     background-color: whitesmoke !important;

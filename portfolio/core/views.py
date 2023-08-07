@@ -89,6 +89,7 @@ def project_detail(request, pk, project_name):
 def project_description(request):
     form = ProjectDescriptionForm()
 
-    return render(request, {
+    return render(request, 'core/form.html',{
         'form': form
     })
+

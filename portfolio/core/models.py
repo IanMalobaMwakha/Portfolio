@@ -1,5 +1,5 @@
-
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 # HOME
@@ -94,7 +94,7 @@ class Project(models.Model):
     live_link = models.CharField(max_length=255, null=True)
     project_image = models.ImageField(upload_to='project_images', blank=True, null=True)
     project_short_description = models.CharField(max_length=255, null=True, blank=True)
-    project_description = models.TextField(null=True, blank=True)
+    project_description = RichTextField(null=True, blank=True)
     tools_and_lang = models.ManyToManyField(ToolsUsed, max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 

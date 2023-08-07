@@ -1,6 +1,7 @@
 
 from django.db import models
 
+
 # HOME
 class Home(models.Model):
     name = models.CharField(max_length=255)

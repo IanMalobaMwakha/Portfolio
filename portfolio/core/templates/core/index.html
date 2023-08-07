@@ -237,11 +237,12 @@
             <div class="card-body">
               <h5 class="card-title">{{ project.project_name }}</h5>
               <hr>
-              <a href="{{ project.github_link }}" class="btn btn-primary" target="_blank">Github Link</a>
-              <a href="{{ project.live_link }}" class="btn btn-primary" target="_blank">Live Link</a>
+              <a href="{{ project.github_link }}" class="btn btn-primary github-button" target="_blank">Github Link</a>
+              <a href="{{ project.live_link }}" class="btn btn-primary live-button" target="_blank">Live Link</a>
+
               <hr>
               <p class="card-text">{{ project.project_short_description }}</p>
-              <a href="{% url 'project_detail' pk=project.pk project_name=project.project_name %}" class="btn btn-primary">Learn More</a>
+              <a href="{% url 'project_detail' pk=project.pk project_name=project.project_name %}" class="btn btn-primary learn-more-button">Learn More</a>
             </div>
           </div>
         </div>

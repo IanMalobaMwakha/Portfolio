@@ -233,7 +233,7 @@
       {% for project in project_name %}
         <div class="col-sm-6 col-md-6 text-center">
           <div class="card">
-            <img src="{{ project.project_image.url }}" class="card-img-top" alt="project-image" height="200px" width="250px">
+            <img src="{{ project.project_image.url }}" class="card-img-top" alt="project-image" height="270px" width="180px">
             <div class="card-body">
               <h5 class="card-title">{{ project.project_name }}</h5>
               <hr>
@@ -245,6 +245,7 @@
             </div>
           </div>
         </div>
+        <br>
       {% endfor %}
     </div>    
   </div>

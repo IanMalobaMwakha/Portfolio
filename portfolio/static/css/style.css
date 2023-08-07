@@ -378,11 +378,17 @@
 
 
 /* PROJECTS section */
-.card {
-    margin: 20px;
-    border-radius: 6px !important;
-}
 
+.card-title {
+    font-size: 25px !important;
+}
+.btn {
+    font-size: 16px;
+    color: black;
+}
+.btn-primary {
+    color: #19d5e2;
+}
 /* CONTACT section */
 
 
@@ -474,8 +480,8 @@ html,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 50.5%;
     font-size: 9px;
+
 }
 
 

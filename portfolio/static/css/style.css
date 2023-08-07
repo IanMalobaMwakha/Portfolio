@@ -98,6 +98,8 @@
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+    word-spacing: -2px !important;
+
 }
 
 .btn-contact-me {

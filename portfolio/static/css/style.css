@@ -384,10 +384,21 @@
 }
 .btn {
     font-size: 16px;
-    color: black;
+    color: whitesmoke;
 }
 .btn-primary {
-    color: #19d5e2;
+    background-color: blue;
+
+}
+.github-button {
+    margin-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.live-button {
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /* CONTACT section */
 

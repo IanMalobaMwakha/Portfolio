@@ -378,7 +378,9 @@
 
 
 /* PROJECTS section */
-
+.card {
+    margin: 25px;
+}
 .card-title {
     font-size: 25px !important;
 }

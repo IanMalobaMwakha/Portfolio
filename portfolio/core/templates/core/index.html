@@ -241,8 +241,8 @@
               <a href="{{ project.live_link }}" class="btn btn-primary live-button" target="_blank">Live Link</a>
 
               <hr>
-              <p class="card-text">{{ project.project_short_description }}</p>
-              <a href="{% url 'project_detail' pk=project.pk project_name=project.project_name %}" class="btn btn-primary learn-more-button">Learn More</a>
+              <p class="card-text">{{ project.project_short_description }} ...<a href="{% url 'project_detail' pk=project.pk project_name=project.project_name %}" class="learn-more">Learn More</a>
+              </p>
             </div>
           </div>
         </div>

@@ -43,6 +43,12 @@ def index(request):
 
     #Contact
     my_email = Contact.objects.get()
+    my_phone = Contact.objects.get()
+    linkedln = Contact.objects.get()
+    github = Contact.objects.get()
+    twitter = Contact.objects.get()
+    codepen = Contact.objects.get()
+    whatsapp = Contact.objects.get()
 
 
 
@@ -76,6 +82,14 @@ def index(request):
         'project_description': project_description,
         'tools_and_lang': tools_and_lang,
         'tools_name': tools_name,
+
+        'my_email': my_email,
+        'my_phone': my_phone,
+        'linkedln': linkedln,
+        'github': github,
+        'twitter': twitter,
+        'codepen': codepen,
+        'whatsapp': whatsapp,
 
     })
 

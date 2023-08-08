@@ -2,7 +2,7 @@ from django.contrib import admin
 from ckeditor.widgets import CKEditorWidget
 
 
-from .models import Home, About, SkillCategory, Skill, Education, Experience, ToolsUsed, Project
+from .models import Home, About, SkillCategory, Skill, Education, Experience, ToolsUsed, Project, Contact
 
 admin.site.register(Home)
 
@@ -20,6 +20,7 @@ admin.site.register(ToolsUsed)
 
 admin.site.register(Project)
 
+admin.site.register(Contact)
 
 
 

@@ -265,12 +265,27 @@
 
     {% for contact in my_email %}
       {{ contact.my_email }}
+      <br>
       {{ contact.my_phone }}
-      {{ contact.linkedln }}
-      {{ contact.github }}
-      {{ contact.twitter }}
-      {{ contact.codepen }}
-      {{ contact.whatsapp }}
+      <br>
+      <a href="{{ contact.linkedln }}" class="btn btn-primary github-button" target="_blank">linkedln Link</a>
+      
+      <br>
+      <a href="{{ contact.github }}" class="btn btn-primary github-button" target="_blank">Github Link</a>
+
+      
+      <br>
+      <a href="{{ contact.twitter }}" class="btn btn-primary github-button" target="_blank">twitter Link</a>
+
+      
+      <br>
+      <a href="{{ contact.codepen }}" class="btn btn-primary github-button" target="_blank">codepen Link</a>
+
+      
+      <br>
+      <a href="{{ contact.whatsapp }}" class="btn btn-primary github-button" target="_blank">whatsapp Link</a>
+
+      
     {% endfor %}
     
   </div>

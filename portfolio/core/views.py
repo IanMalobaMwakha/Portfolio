@@ -42,7 +42,7 @@ def index(request):
     tools_name = ToolsUsed.objects.all()
 
     #Contact
-    my_email = Contact.objects.get()
+    my_email = Contact.objects.all()
     my_phone = Contact.objects.get()
     linkedln = Contact.objects.get()
     github = Contact.objects.get()
@@ -101,12 +101,5 @@ def project_detail(request, pk, project_name):
         'project': project,
         'pk': pk,
         'project_name': project_name,
-    })
-
-def project_description(request):
-    form = ProjectDescriptionForm()
-
-    return render(request, 'core/form.html',{
-        'form': form
     })
 

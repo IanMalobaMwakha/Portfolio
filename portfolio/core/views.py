@@ -3,7 +3,7 @@ from django.conf import settings
 from .forms  import ProjectDescriptionForm
 
 from django.shortcuts import get_object_or_404
-from .models import Home, About, Skill, SkillCategory, Education, Experience, ToolsUsed, Project
+from .models import Home, About, Skill, SkillCategory, Education, Experience, ToolsUsed, Project, Contact
 
 def index(request):
     #Home
@@ -40,6 +40,9 @@ def index(request):
     project_description = Project.objects.all()
     tools_and_lang = Project.objects.all()
     tools_name = ToolsUsed.objects.all()
+
+    #Contact
+    my_email = Contact.objects.get()
 
 
 

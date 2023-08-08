@@ -106,3 +106,15 @@ class Project(models.Model):
     def __str__(self):
         return self.project_name
     
+
+class Contact(models.Model):
+    my_email = models.CharField(max_length=255, null=True, blank=True)
+    my_phone = models.CharField(max_length=255, null=True, blank=True)
+    linkedln = models.CharField(max_length=255, null=True, blank=True)
+    github= models.CharField(max_length=255, null=True, blank=True)
+    twitter = models.CharField(max_length=255, null=True, blank=True)
+    codepen = models.CharField(max_length=255, null=True, blank=True)
+    whatsapp = models.CharField(max_length=255, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = "CONTACT SECTION: Contact"

@@ -1,5 +1,4 @@
 from django.contrib import admin
-from ckeditor.widgets import CKEditorWidget
 
 
 from .models import Home, About, SkillCategory, Skill, Education, Experience, ToolsUsed, Project, Contact

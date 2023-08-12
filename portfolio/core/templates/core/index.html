@@ -262,34 +262,8 @@
 <h2><span class="text-underline">CONTACT</span></h2>
 <div class="contat-container mt-5">
   <div class="row justify-content-between align-items-center">
-
     {% for contact in my_email %}
-      {{ contact.my_email }}
-      <br>
-      {{ contact.my_phone }}
-      <br>
-      <a href="{{ contact.linkedln }}" class="btn btn-primary github-button" target="_blank">linkedln Link</a>
-      
-      <br>
-      <a href="{{ contact.github }}" class="btn btn-primary github-button" target="_blank">Github Link</a>
-
-      
-      <br>
-      <a href="{{ contact.twitter }}" class="btn btn-primary github-button" target="_blank">twitter Link</a>
-
-      
-      <br>
-      <a href="{{ contact.codepen }}" class="btn btn-primary github-button" target="_blank">codepen Link</a>
-
-      
-      <br>
-      <a href="{{ contact.whatsapp }}" class="btn btn-primary github-button" target="_blank">whatsapp Link</a>
-      
-    {% endfor %} 
-
-
-    {% for contact in my_email %}
-      <div class="email-container mt-5">
+        <div class="email-container mt-5">
         <div>
           <table>
             <tr>
@@ -312,36 +286,50 @@
           <table>
             <tr>
               <td>
-                <iconify-icon icon="iconamoon:email-bold" style="color: white;" width="40"></iconify-icon>
+                <iconify-icon icon="teenyicons:phone-outline" style="color: white;" width="40" height="35"></iconify-icon>
               </td>
             </tr>
             <tr>
-              <td>Email</td>
+              <td>Phone</td>
             </tr>
             <tr>
-              <td>{{ contact.my_email }}</td>
+              <td>{{ contact.my_phone }}</td>
             </tr>
           </table>
         </div>
       </div>
 
-      <div class="socila-media-container mt-5">
+      <div class="social-media-container mt-5">
         <div>
           <table>
             <tr>
               <td>
-                <iconify-icon icon="iconamoon:email-bold" style="color: white;" width="40"></iconify-icon>
+                <iconify-icon icon="material-symbols:account-tree-outline" style="color: white;" width="40" height="35"></iconify-icon>
               </td>
             </tr>
             <tr>
-              <td>Email</td>
+              <td>Socila Media</td>
             </tr>
             <tr>
-              <td>{{ contact.my_email }}</td>
+              <td>
+                <a href="{{ contact.linkedln }}" target="_blank"><iconify-icon icon="devicon:linkedin" style="color: white;" width="40" height="25"></iconify-icon></a>
+              </td>
+              <td>
+                <a href="{{ contact.github }}" target="_blank"><iconify-icon icon="icon-park:github" style="color: white;" width="40" height="25"></iconify-icon></a>
+              </td>
+              <td>
+                <a href="{{ contact.twitter }}" target="_blank"><iconify-icon icon="logos:twitter" style="color: white;" width="40" height="25"></iconify-icon></a>
+              </td>
+              <td>
+                <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white;" width="40" height="25"></iconify-icon></a>
+              </td>
+              <td>
+                <a href="{{ contact.whatsapp }}" target="_blank"><iconify-icon icon="logos:whatsapp-icon" style="color: white;" width="40" height="25"></iconify-icon></a>
+              </td>
             </tr>
           </table>
         </div>
-      </div>
+      </div>      
     {% endfor %}
 
 

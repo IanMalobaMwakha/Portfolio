@@ -476,6 +476,15 @@
     box-sizing: border-box;
 }
 
+.my-contact-titles {
+    font-size: 18px !important;
+    font-weight: 90%;
+    font-weight: bolder;
+    color: rgb(132, 207, 46);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 

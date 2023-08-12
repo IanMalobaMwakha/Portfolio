@@ -448,6 +448,7 @@
 
 
 /* CONTACT section */
+
 .email-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -457,9 +458,23 @@
     box-sizing: border-box;
 }
 
+.phone-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #26153d;
+    box-sizing: border-box;
+}
 
-
-
+.socila-media-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #26153d;
+    box-sizing: border-box;
+}
 
 
 

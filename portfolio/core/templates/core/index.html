@@ -284,12 +284,31 @@
       
       <br>
       <a href="{{ contact.whatsapp }}" class="btn btn-primary github-button" target="_blank">whatsapp Link</a>
-
       
-    {% endfor %}
-    
+    {% endfor %} 
   </div>
 </div>
+
+{% for contact in my_email %}
+  <div class="email-container mt-5">
+    <div>
+      <table>
+        <tr>
+          <td>
+            <iconify-icon icon="iconamoon:email-bold" style="color: white;" width="40"></iconify-icon>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+        </tr>
+        <tr>
+          <td>{{ contact.my_email }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endfor %}
+
 
 <br></section>
 

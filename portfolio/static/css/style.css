@@ -524,6 +524,18 @@
 /* BLOGS section */
 
 
+
+/* FOOTER section */
+.footer {
+    max-height: 200px;
+    width: auto;
+    background-color: blue;
+}
+
+
+
+
+
 /* ...GENERALS..  */
 body {
     background-color: rgb(10, 16, 34) !important;

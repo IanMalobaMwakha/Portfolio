@@ -89,7 +89,7 @@ class Project(models.Model):
 
     
     class Meta:
-        verbose_name_plural = "PROJECTS SECTION: Project"
+        verbose_name_plural = "PROJECTS SECTION"
         # ordering = ["-created_at"]
 
     def __str__(self):

@@ -449,55 +449,34 @@
 
 /* CONTACT section */
 
-.email-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #26153d;
-    box-sizing: border-box;
-}
-
-.phone-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #26153d;
-    box-sizing: border-box;
-}
-
+/* Common styles for the three containers */
+.email-container,
+.phone-container,
 .social-media-container {
-    max-width: 1000px;
+    width: 300px; /* Adjust this size as needed */
     margin: 0 auto;
     padding: 10px;
     border-radius: 20px;
     background-color: #26153d;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .my-contact-titles {
-    font-size: 20px !important;
-    font-weight: 90%;
+    font-size: 20px;
     font-weight: bolder;
     color: rgb(132, 207, 46);
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .my-phone-and-email {
-    font-size: 17px !important;
-    font-weight: 90%;
+    font-size: 17px;
     font-weight: 400;
     color: whitesmoke;
-    text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-}
-
-.my-contact-info {
-    text-align: center;
+    margin: 0;
 }
 
 .my-contact-info {
@@ -509,17 +488,30 @@
     padding: 10px;
     border-radius: 20px;
     box-sizing: border-box;
-  }
+}
 
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+  .my-contact-info {
+    flex-direction: column; /* Stack containers on smaller screens */
+    align-items: center;
+  }
+  
   .email-container,
   .phone-container,
   .social-media-container {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    margin: 20px;
-    align-items: center;
+    width: 80%; /* Adjust width for smaller screens */
+    margin: 10px auto;
   }
+  
+  .email-container,
+  .phone-container,
+  .social-media-container {
+    text-align: center;
+  }
+}
+
+
 
 
 /* BLOGS section */

@@ -91,7 +91,7 @@ class ToolsUsed(models.Model):
 class Project(models.Model):
     project_name = models.CharField(max_length=255)
     github_link = models.CharField(max_length=255, null=True, blank=True)
-    live_link = models.CharField(max_length=255, null=True)
+    live_link = models.CharField(max_length=255, null=True, blank=True)
     github_readme_link = models.CharField(max_length=255, null=True, blank=True)
     project_image = models.ImageField(upload_to='project_images', blank=True, null=True)
     project_short_description = models.CharField(max_length=255, null=True, blank=True)

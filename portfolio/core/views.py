@@ -34,9 +34,9 @@ def index(request):
     project_name = Project.objects.all()
     github_link = Project.objects.all()
     live_link = Project.objects.all()
+    github_readme_link = Project.objects.all()
     project_image = Project.objects.all()
     project_short_description = Project.objects.all()
-    project_description = Project.objects.all()
     tools_and_lang = Project.objects.all()
     tools_name = ToolsUsed.objects.all()
 
@@ -78,7 +78,7 @@ def index(request):
         'live_link': live_link,
         'project_image': project_image,
         'project_short_description': project_short_description,
-        'project_description': project_description,
+        'github_readme_link': github_readme_link,
         'tools_and_lang': tools_and_lang,
         'tools_name': tools_name,
 
@@ -92,13 +92,4 @@ def index(request):
 
     })
 
-
-def project_detail(request, pk, project_name):
-    project = get_object_or_404(Project, pk=pk)
-
-    return render(request, 'core/project_detail.html', {
-        'project': project,
-        'pk': pk,
-        'project_name': project_name,
-    })
 

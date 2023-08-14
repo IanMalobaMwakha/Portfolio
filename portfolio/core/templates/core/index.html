@@ -263,74 +263,74 @@
 <div class="row justify-content-between align-items-center">
     {% for contact in my_email %}
         <div class="my-contact-info">
-          <div class="email-container mt-5">
-            <div>
-              <table>
-                <tr>
-                  <td>
-                    <iconify-icon icon="iconamoon:email-bold" style="color: white;" width="40"></iconify-icon>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="my-contact-titles">Email</td>
-                </tr>
-                <tr>
-                  <td class="my-phone-and-email">{{ contact.my_email }}</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+                <div class="email-container mt-5">
+                  <div>
+                    <table>
+                      <tr>
+                        <td>
+                          <iconify-icon icon="iconamoon:email-bold" style="color: white;" width="40"></iconify-icon>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="my-contact-titles">Email</td>
+                      </tr>
+                      <tr>
+                        <td class="my-phone-and-email">{{ contact.my_email }}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
     
-          <div class="phone-container mt-5">
-            <div>
-              <table>
-                <tr>
-                  <td>
-                    <iconify-icon icon="teenyicons:phone-outline" style="color: white;" width="40" height="35"></iconify-icon>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="my-contact-titles">Phone</td>
-                </tr>
-                <tr>
-                  <td class="my-phone-and-email">{{ contact.my_phone }}</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+                <div class="phone-container mt-5">
+                  <div>
+                    <table>
+                      <tr>
+                        <td>
+                          <iconify-icon icon="teenyicons:phone-outline" style="color: white;" width="40" height="35"></iconify-icon>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="my-contact-titles">Phone</td>
+                      </tr>
+                      <tr>
+                        <td class="my-phone-and-email">{{ contact.my_phone }}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
     
-          <div class="social-media-container mt-5">
-            <div>
-              <table>
-                <tr>
-                  <td>
-                    <iconify-icon icon="material-symbols:account-tree-outline" style="color: white;" width="40" height="38"></iconify-icon>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="my-contact-titles">Social Media</td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="{{ contact.linkedln }}" target="_blank"><iconify-icon icon="devicon:linkedin" style="color: white;" width="40" height="29"></iconify-icon></a>
-                  </td>
-                  <td>
-                    <a href="{{ contact.github }}" target="_blank"><iconify-icon icon="bytesize:github" style="color: white;" width="40" height="28"></iconify-icon></a>
-                  </td>
-                  <td>
-                    <a href="{{ contact.twitter }}" target="_blank"><iconify-icon icon="logos:twitter" style="color: white;" width="40" height="25"></iconify-icon></a>
-                  </td>
-                  <td>
-                    <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white;" width="40" height="29"></iconify-icon></a>
-                  </td>
-                  <td>
-                    <a href="{{ contact.whatsapp }}" target="_blank"><iconify-icon icon="logos:whatsapp-icon" style="color: white;" width="40" height="28"></iconify-icon></a>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div> 
-        </div>     
+                <div class="social-media-container mt-5">
+                  <div>
+                    <table>
+                      <tr>
+                        <td>
+                          <iconify-icon icon="material-symbols:account-tree-outline" style="color: white;" width="40" height="38"></iconify-icon>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="my-contact-titles">Social Media</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="{{ contact.linkedln }}" target="_blank"><iconify-icon icon="devicon:linkedin" style="color: white;" width="40" height="29"></iconify-icon></a>
+                        </td>
+                        <td>
+                          <a href="{{ contact.github }}" target="_blank"><iconify-icon icon="bytesize:github" style="color: white;" width="40" height="28"></iconify-icon></a>
+                        </td>
+                        <td>
+                          <a href="{{ contact.twitter }}" target="_blank"><iconify-icon icon="logos:twitter" style="color: white;" width="40" height="25"></iconify-icon></a>
+                        </td>
+                        <td>
+                          <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white;" width="40" height="29"></iconify-icon></a>
+                        </td>
+                        <td>
+                          <a href="{{ contact.whatsapp }}" target="_blank"><iconify-icon icon="logos:whatsapp-icon" style="color: white;" width="40" height="28"></iconify-icon></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+          </div>     
     {% endfor %}
 
   </div>

@@ -500,6 +500,28 @@
     text-align: center;
 }
 
+.my-contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .email-container,
+  .phone-container,
+  .social-media-container {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+  }
+
+
 
 /* BLOGS section */
 

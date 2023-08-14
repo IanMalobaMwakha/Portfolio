@@ -1,5 +1,4 @@
 from django.db import models
-from ckeditor.fields import RichTextField
 
 
 # HOME
@@ -79,15 +78,6 @@ class Experience(models.Model):
 
 
 # PROJECTS
-class ToolsUsed(models.Model):
-    tools_name = models.CharField(max_length=100)
-
-    class Meta:
-        verbose_name_plural = "PROJECTS SECTION: Tools and Technologies Used"
-
-    def __str__(self):
-        return self.tools_name
-
 class Project(models.Model):
     project_name = models.CharField(max_length=255)
     github_link = models.CharField(max_length=255, null=True, blank=True)
@@ -95,7 +85,6 @@ class Project(models.Model):
     github_readme_link = models.CharField(max_length=255, null=True, blank=True)
     project_image = models.ImageField(upload_to='project_images', blank=True, null=True)
     project_short_description = models.CharField(max_length=255, null=True, blank=True)
-    tools_and_lang = models.ManyToManyField(ToolsUsed, max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     

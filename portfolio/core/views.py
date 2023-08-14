@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 
 from django.shortcuts import get_object_or_404
-from .models import Home, About, Skill, SkillCategory, Education, Experience, ToolsUsed, Project, Contact
+from .models import Home, About, Skill, SkillCategory, Education, Experience, Project, Contact
 
 def index(request):
     #Home
@@ -37,8 +37,6 @@ def index(request):
     github_readme_link = Project.objects.all()
     project_image = Project.objects.all()
     project_short_description = Project.objects.all()
-    tools_and_lang = Project.objects.all()
-    tools_name = ToolsUsed.objects.all()
 
     #Contact
     my_email = Contact.objects.all()
@@ -79,8 +77,6 @@ def index(request):
         'project_image': project_image,
         'project_short_description': project_short_description,
         'github_readme_link': github_readme_link,
-        'tools_and_lang': tools_and_lang,
-        'tools_name': tools_name,
 
         'my_email': my_email,
         'my_phone': my_phone,

@@ -527,22 +527,24 @@
 
 /* Increase font size for placeholders */
 .form-control::placeholder {
-    font-size: 18px; /* Adjust the desired font size here */
+    font-size: 18px; 
   }
 /* Increase font size for user input */
 .form-control {
-    font-size: 16px; /* Adjust the desired font size here */
+    font-size: 16px; 
   }
   
   /* Increase height for textarea */
   .form-control[type="textarea"] {
-    height: 19rem; /* Adjust the desired height here */
+    height: 19rem; 
   }
 /* Reduce button width */
 .btn-primary {
-    width: 150px; /* Adjust the desired width here */
+    width: 150px; 
   }
-  
+#contactForm {
+    padding: 20px;
+}
   
   
 
@@ -554,7 +556,7 @@
 .footer {
     max-height: 200px;
     width: auto;
-    background-color: blue;
+    background-color: black;
 }
 
 

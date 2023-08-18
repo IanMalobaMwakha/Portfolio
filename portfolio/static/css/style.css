@@ -559,14 +559,27 @@
     width: auto;
     background-color: black;
     font-size: 15px;
+    margin-top: 50px;
 }
 
 .Copyright {
     text-align: center;
     background-color: black;
     padding: 40px;
+    font-size: small;
+}
+.container-fluid {
+    background-color: #000;
 }
 
+.footer-line {
+    border-top: 3px solid white; /* Adjust thickness and color as needed */
+  }
+
+.footer-paragraph {
+    text-align: left;
+    padding: 40px;
+}
 
 
 /* ...GENERALS..  */

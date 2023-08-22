@@ -428,9 +428,15 @@
   
     <div class="Copyright">
       <hr class="footer-line">
-      <p>© <i>Copyright 2023 All rights reserved</i></p>
+      <p><i>&copy; <span id="currentYear"></span> All rights reserved</i></p>
       <p><i>Made by Ian Maloba</i></p>
     </div>
+    
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
+    
     
   </div>
 </section>

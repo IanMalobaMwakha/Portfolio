@@ -14,11 +14,10 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Set the section to the full viewport height */
-    padding-top: 100px; /* Add some top padding for spacing */
   }
   
   .container {
-    width: 80%; /* Set the width of the container to 80% */
+    width: 85%; /* Set the width of the container to 80% */
   }
   
   /* Rest of your styles... */
@@ -43,9 +42,6 @@
 
 
 /* Default styles for larger screens (laptops) */
-.Home {
-    padding-top: 100px; /* Add some top padding for spacing */
-  }
   
   .container {
     width: 80%; /* Set the width of the container to 80% */
@@ -93,7 +89,7 @@
     background-image: url('background_image.jpg');
     background-size: cover;
     background-position: center center;
-    padding-top: 100px;
+    padding-top: 20px;
   }
   
   .container {
@@ -817,6 +813,7 @@ html,
     text-decoration: none;
     color: #fff;
     font-size: 2.5rem;
+    padding-left: -20px !important;
 }
 
 .nav div.logo a:hover {
@@ -862,7 +859,7 @@ html,
 }
 
 .nav {
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;

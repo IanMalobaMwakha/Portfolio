@@ -238,9 +238,10 @@
             <div class="card-body">
               <h5 class="card-title">{{ project.project_name }}</h5>
               <hr>
-              <a href="{{ project.github_link }}" class="btn btn-primary github-button" target="_blank">Github Link</a>
-              <a href="{{ project.live_link }}" class="btn btn-primary live-button" target="_blank">Live Link</a>
-
+              <div class="btn-primary-container">
+                <a href="{{ project.github_link }}" class="btn btn-primary github-button" target="_blank">Github Link</a>
+                <a href="{{ project.live_link }}" class="btn btn-primary live-button" target="_blank">Live Link</a>
+              </div>
               <hr>
               <p class="card-text">{{ project.project_short_description }} ...<a href="{{ project.github_readme_link }}" target="_blank" class="learn-more"><i>Learn More</i></a>
               </p>

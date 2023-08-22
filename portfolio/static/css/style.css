@@ -771,6 +771,7 @@ html,
     height: 2px;
     background-color: #000;
     transition: width 1s ease-in-out;
+    color: #19d5e2;
   }
   
   #mainListDiv .navlinks .nav-link.underline:hover::after,
@@ -785,9 +786,10 @@ html,
   }
   
   #mainListDiv .navlinks .nav-link {
-    margin-right: -30px !important; /* Adjust the right margin as desired */
-    font-size: 20px !important;
-    font-weight: bolder;
+    margin-right: -30px !important; 
+    font-size: 18px !important;
+    font-weight: 500;
+    margin-left: 20px;
   }
   
   #mainListDiv .navlinks .nav-link:last-child {

@@ -260,7 +260,7 @@
 
 
 /* RESUME section */
-/* Default styles for the button */
+/* Default styles for the buttons */
 .btn-cv-download-resume {
     letter-spacing: 1px;
     color: #fff;
@@ -271,7 +271,7 @@
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: bold;
-    transition: all .5s;
+    transition: all 0.5s;
     display: inline-block;
     padding: 9px;
     height: 42px;
@@ -281,7 +281,6 @@
     margin-right: 120px;
   }
   
-  /* Button hover effect */
   .btn-cv-download-resume:hover {
     background-color: whitesmoke;
     color: rgb(55, 10, 139);
@@ -289,20 +288,22 @@
   
   /* Media query for smaller screens (max-width: 767px) */
   @media (max-width: 767px) {
-    .btn-cv-download-resume {
-      margin: 5px; /* Add some space between the buttons */
-      margin-left: 18px;
-      margin-right: 18px;
-      padding: 5px 14px; /* Reduce padding for smaller screens */
-      font-size: 12px; /* Adjust font size for smaller screens */
-      width: auto; /* Allow the button to expand based on content */
-    }
-    
-    /* Center the buttons horizontally */
     .button-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+  
+    /* Hide the 'View CV' button on smaller screens */
+    .btn-cv-download-resume:nth-child(2) {
+      display: none;
+    }
+  
+    /* Adjust the 'Download My Resume' button's positioning */
+    .btn-cv-download-resume {
+      margin: 5px; /* Add some space between the buttons */
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   

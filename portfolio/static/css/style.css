@@ -839,6 +839,7 @@ html,
     height: 65px;
     padding: 0;
     padding-right: 3rem;
+    color: whitesmoke;
 }
 
 .nav div.main_list ul li a {
@@ -865,16 +866,15 @@ html,
     transition: all 0.4s ease;
 }
 
-#mainListDiv .navlinks .nav-link.underline {
-    text-decoration: underline 4px solid !important;
-  }
-
-  #mainListDiv .navlinks .nav-link:hover {
-    text-decoration: underline  4px solid !important;
+#mainListDiv .navlinks .nav-link {
+    text-decoration: none !important;
+    position: relative;
+    color: whitesmoke; /* Set the default color for the text */
   }
   
-  #mainListDiv .navlinks .nav-link {
-    text-decoration: none !important;
+  #mainListDiv .navlinks .nav-link.underline {
+    text-decoration: none; /* Remove the default underline */
+    color: #19d5e2; /* Change color when underlined */
   }
   
   #mainListDiv .navlinks .nav-link.underline::after {
@@ -885,14 +885,21 @@ html,
     width: 0;
     height: 2px;
     background-color: #000;
-    transition: width 1s ease-in-out;
-    color: #19d5e2;
+    transition: width 0.3s ease-out, background-color 0.3s ease-out;
   }
   
   #mainListDiv .navlinks .nav-link.underline:hover::after,
   #mainListDiv .navlinks .nav-link.underline:active::after {
     width: 100%;
+    background-color: #19d5e2; /* Change color when underlined */
   }
+  
+  /* Add a class to the body element when certain part of the page is active */
+  .some-section-active #mainListDiv .navlinks .nav-link.underline {
+    color: your_custom_color; /* Change color when in a certain section */
+  }
+  
+
   
   #mainListDiv .navlinks {
     margin: 0;

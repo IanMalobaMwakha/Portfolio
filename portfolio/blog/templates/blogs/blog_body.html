@@ -1,3 +1,14 @@
+{% extends 'blogs/base.html' %}
+
+{% block title %} | {{ blog.blog_name }} {% endblock %}
+
+{% load static %}  
+
+{% block content %}
+
 - {{ blog.blog_name }}
-{{ blog.blog_image.blog_image }}
+<img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 50%; height: 50%; object-fit: cover;" title="{{ blog.blog_name }}">
+
 {{ blog.body|safe }}
+    {{blog.blog_name}}
+{% endblock %}

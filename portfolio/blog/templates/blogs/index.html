@@ -1,6 +1,6 @@
 {% extends 'blogs/base.html' %}
 
-{% block title %} | {% block blogtitle %} {% endblock %} {% endblock %}
+{% block title %} {% endblock %}
 
 {% load static %}  
 
@@ -30,7 +30,10 @@
     <p id="latest_articles">ALL BLOGS</p>
     <br>
     {% for blog in blogs %}
-    <a href="{% url 'blog:blog_body' blog.id %}" target="_blank"><h2>- {{ blog.blog_name }}</h2></a>
+    <a href="{% url 'blog:blog_body' blog.id %}"><h2>- {{ blog.blog_name }}</h2></a>
+    <a href="{% url 'blog:blog_body' blog.id %}">
+      <img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 50%; height: 50%; object-fit: cover;" title="{{ blog.blog_name }}">
+    </a>
     {% endfor %}
   </div>
 </section>

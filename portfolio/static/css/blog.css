@@ -1,17 +1,15 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+.BlogHome {
     background-image: url("blog-background.jpg");
-    backdrop-filter:  brightness(90%);
+    background-position: center top;
     background-size: cover;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center center;
-    padding-top: 20px;
+    background-repeat: no-repeat;
+}
+.BlogsIntro {
+    margin: 25px;
+}
 
+.AllBlogs {
+    align-items: center;
+    margin-top: 80px;
 }

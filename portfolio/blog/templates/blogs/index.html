@@ -6,93 +6,35 @@
 
 {% block content %}
 
-<div id="canvas_container"></div>
+<!-- Blog Home section-->
 
-<!-- <button id="fullscr">Go Fullscreen</button> -->
+<section class="BlogHome">
+  <div class="BlogsIntro">
+    <h1>HERE YOU WILL FIND MY ALL-TIME BLOGS</h1>
+    <br>
+    <br>
+    <p>Allow me share this guiding quote by Marcus Aurelius: 
+      <i>Never let the future disturb you. 
+        You will meet it, if you have to, 
+        with the same weapons of reason which today arm you against the present.
+      </i>
+    </p>
+  </div>
+  <p style="font-family: cursive;"><a href="#latest_articles" style="text-decoration: none; color: aliceblue;">Check out my latest articles below 👇</a></p> 
+</section>
 
-<div>
-  <p>
-    30 Best Bootstrap Navbar Template in 2022
-Bootstrap 4 Navbar with Icon Top. Designer: Tam710562. ...
-Navbar with Social Icon & Dropdown. Designer: Priyanshu28696. ...
-Responsive Navbar. ...
-Bootstrap 4 Navbar with Logo Image. ...
-Bootstrap NavBar Menu Dropdowns. ...
-Bootstrap 4 Right Align Navbar. ...
-Transparent Sticky NavBar. ...
-Bootstrap 4 Navbar.
-More items...•2 Mar 2020
 
-30 Best Bootstrap Navbar Template in 2022 - Mockplus
+<!-- AllBlogs section-->
+<section id="AllBlogs">
+  <div>
+    <p id="latest_articles">ALL BLOGS</p>
+    <br>
+    {% for blog in blogs %}
+    - {{ blog.blog_name }}
+    {% endfor %}
+  </div>
+</section>
 
-Mockplus
-https://www.mockplus.com › blog › post › bootstrap-nav...
-About featured snippets
-•
-Feedback
-
-20 Free Bootstrap Navbar Examples & Templates 2023
-
-Colorlib
-https://colorlib.com › Home › Snippets
-22 Aug 2023 — This blog post lists our best Bootstrap navbar examples. These website menu templates are free of cost and fully customizable.
-‎Website Menu V03 · ‎Website Menu V01 · ‎Website Menu V04 · ‎Website Menu V02
-
-33+ Most Beautiful Bootstrap 5 Navbar Examples | 2023 Edition
-
-htmljstemplates.com
-https://htmljstemplates.com › html › bootstrap-5-navbars
-1. Simple responsive navbar · 2. Centered nav-brand · 3. Social icons navbar · 4. Multi-line navbar template.
-
-Navbar
-
-Get Bootstrap
-https://getbootstrap.com › docs › components › navbar
-Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including ...
-
-30 Bootstrap Navbars - free examples & easy customization
-
-Material Design for Bootstrap
-https://mdbootstrap.com › Standard
-A stunning collection of Navbar templates built with the newest Bootstrap 5. Navbar YouTube, Facebook, Amazon styles, Navbar with image, carousel, Navbar light, ...
-
-37 Best Bootstrap Navbar Examples 2023
-
-uiCookies
-https://uicookies.com › Blog
-9 Sept 2023 — These bootstrap navbar examples will help you make a better bootstrap navigation menu design and saves your valuable time.
-
-10+ Best and Creative Bootstrap Navbar Examples
-
-bootstrapdash.com
-https://www.bootstrapdash.com › Home › Blog
-7 Jan 2020 — 10+ Best and Creative Bootstrap Navbar Examples · MiriUI Pro · LeadUI Navbar · Unplug Navbar · Mobile Menu Concept · Another Menu Concept.
-
-Bootstrap Navigation Bar [ 20 Best Navbar Examples ]
-
-Stackfindover
-https://blog.stackfindover.com › bootstrap-navigation-...
-11 Oct 2021 — In this collection, I have listed 20 Best Bootstrap Navbar examples Check out these Awesome Navigation Bar like: #1 bootstrap 4 navbar.
-
-Best Admin Templates with Bootstrap Navbar | BootstrapDash
-
-bootstrapdash.com
-https://www.bootstrapdash.com › Home › Blog
-25 Nov 2022 — Top Admin Templates with Bootstrap Navbar · 1. MiriUI Pro · 2. LeadUI · 3. Unplug UI · 4. Stellar Admin · 5. Future UI · 6. Falcon · 7. Yora UI.
-
-47 Bootstrap Menus
-
-FreeFrontend
-https://freefrontend.com › bootstrap-menus
-8 May 2021 — Collection of free Bootstrap navigation menu code examples: responsive, sidebar, dropdown, fixed, vertical, horizontal, hamburger, etc.
-Related searches
-Best bootstrap navbar template
-Best bootstrap navbar template free
-bootstrap navbar examples
-bootstrap 5 navbar
-bootstrap navbar template code
-</p>  
-</div>
 
 {% endblock %}
 

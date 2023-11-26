@@ -12,3 +12,4 @@ class Blog(models.Model):
     
     class Meta:
         verbose_name_plural = "BLOGS SECTION"
+

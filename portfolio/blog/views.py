@@ -23,3 +23,5 @@ def blog_body(request, pk):
         'pk': pk,
     })
 
+
+

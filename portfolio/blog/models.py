@@ -5,7 +5,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Blog(models.Model):
     blog_name = models.CharField(max_length=255)
     blog_image = models.ImageField(upload_to='blog_images', blank=True, null=True)
-    # date
+    #date
     body = RichTextUploadingField()
     def __str__(self):
         return self.blog_name

@@ -6,14 +6,7 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
-.BlogsIntro {
-    margin-top: 70px;
-    margin: 25px;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-}
+
 
 .AllBlogs {
     align-items: center;

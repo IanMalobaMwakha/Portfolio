@@ -6,7 +6,7 @@
 
 {% block content %}
 
-- {{ blog.blog_name }}
+{{ blog.blog_name }}
 <img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 50%; height: 50%; object-fit: cover;" title="{{ blog.blog_name }}">
 
 {{ blog.body|safe }}

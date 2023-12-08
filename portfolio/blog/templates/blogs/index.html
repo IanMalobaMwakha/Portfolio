@@ -13,10 +13,10 @@
     <br><br>
     <h1 style="color: aliceblue; text-align: center; font-family: 'Courier New', monospace;"><u>HERE IS THE LANDING PAGE OF MY BLOGS</u></h1>
     <br><br><br>
-    <p class="aurelius-quote" style="color: aliceblue; font-size: 18px; font-family: cursive;">Allow me share this guiding quote by <a href="https://en.wikipedia.org/wiki/Marcus_Aurelius" target="_blank">Marcus Aurelius</a>: 
+    <p class="aurelius-quote" style="color: aliceblue; font-size: 18px;">Allow me share this guiding quote by <a href="https://en.wikipedia.org/wiki/Marcus_Aurelius" target="_blank">Marcus Aurelius</a>: 
       <br>
       <i>
-        <b>
+        <b style="font-family: cursive;">
           "Never let the future disturb you. 
           You will meet it, if you have to, 
           with the same weapons of reason which today arm you against the present."
@@ -25,32 +25,106 @@
     </p>
   </div>
   <br><br>
-  <p style="color: aliceblue; text-align: center; ">I'm just throwing down whatever pops into my head - life stuff, random thoughts, you name it. Warning: I'm no pro writer, so brace yourself for errors and a sprinkle of casual talk. </p>
+  <p style="color: aliceblue; margin: 10px;">I'm just throwing down whatever pops into my head - life stuff, my experiences, random thoughts, you name it. Warning: I'm no pro writer, so brace yourself for errors and a sprinkle of casual talk. </p>
   <p style="font-family: cursive; text-align: center;"><a href="#latest_articles" style="text-decoration: none; color: rgb(128, 213, 224);"><button class="btn btn-primary">Check out my latest articles below 👇</button></a></p> 
 </section>
 
 
 <!-- AllBlogs section-->
-<section id="AllBlogs">
-  <div>
-    <p id="latest_articles">ALL BLOGS</p>
-    <br>
-    {% for blog in blogs %}
-    <a href="{% url 'blog:blog_body' blog.id %}"><h2>- {{ blog.blog_name }}</h2></a>
-    <a href="{% url 'blog:blog_body' blog.id %}">
-      <img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 50%; height: 50%; object-fit: cover;" title="{{ blog.blog_name }}">
-    </a>
-    {% endfor %}
+
+<section class="wrapper">
+  <div class="container-fostrap">
+    <br><br>
+    <p id="latest_articles" style="font-family: 'Courier New', monospace; font-size: 20px;">Latest Articles</p>
+    <br><br>
+      <div class="content">
+          <div class="container">
+              <div class="row">
+                  {% for blog in blogs %}
+                  <div class="col-xs-12 col-sm-4">
+                      <div class="card">
+                          <a class="img-card" href="{% url 'blog:blog_body' blog.id %}">
+                          <img src="{{ blog.blog_image.url }}" />
+                        </a>
+                          <div class="card-content">
+                              <h4 class="card-title">
+                                  <a href="{% url 'blog:blog_body' blog.id %}"> {{ blog.blog_name }}
+                                </a>
+                              </h4>
+                              <p style="font-size: smaller;"><i>11th June 2022</i></p>
+                              <p class="">
+                                  Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                              </p>
+                          </div>
+                          <div class="card-read-more">
+                              <a href="{% url 'blog:blog_body' blog.id %}" class="btn btn-link btn-block">
+                                  Read More
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
   </div>
 </section>
 
-<section id="blogFooter">
-  <div class="contact">
-    <p>Below ar emy contact details...</p>
-  </div>
 
-  <div class="footerAbout">
-    <p>........</p>
+
+<section class="footer" style="color: aliceblue;">
+  <div class="footer">
+    <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="footer-paragraph justify-content-center">
+            I am an ambitious developer, a highly motivated individual with a keen eye for 
+            detail and always looking for ways to optimize, improve my code and learn more.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div>          
+            <div class="mt-3">
+              <div class="my-contact-title-socila-media text-center">Social Media</div>
+            </div>
+            {% for contact in my_email %}
+              <div class="d-flex justify-content-center mt-3">
+                <div class="mx-2">
+                  <a href="{{ contact.linkedln }}" target="_blank"><iconify-icon icon="devicon:linkedin" style="color: white; font-size: 23px;"></iconify-icon></a>
+                </div>
+                <div class="mx-2">
+                  <a href="{{ contact.github }}" target="_blank"><iconify-icon icon="bytesize:github" style="color: white; font-size: 23px;"></iconify-icon></a>
+                </div>
+                <div class="mx-2">
+                  <a href="{{ contact.twitter }}" target="_blank"><iconify-icon icon="logos:twitter" style="color: white; font-size: 23px;"></iconify-icon></a>
+                </div>
+                <div class="mx-2">
+                  <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white; font-size: 23px;"></iconify-icon></a>
+                </div>
+                <div class="mx-2">
+                  <a href="{{ contact.whatsapp }}" target="_blank"><iconify-icon icon="logos:whatsapp-icon" style="color: white; font-size: 23px;"></iconify-icon></a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div class="Copyright">
+      <hr class="footer-line">
+      <p><i>&copy; <span id="currentYear"></span> All rights reserved</i></p>
+      <p><i>Made by Ian Maloba</i></p>
+    </div>
+    
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
+    
+    
   </div>
 </section>
 

@@ -13,14 +13,14 @@ def index(request):
         'blogs': blogs
     })
 
-def blog_body(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
+def blog_body(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
     official_image = Home.objects.get()
 
     return render(request, "blogs/blog_body.html", {
         "official_image": official_image,
         'blog': blog,
-        'pk': pk,
+        'slug': slug,
     })
 
 

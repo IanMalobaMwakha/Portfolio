@@ -37,39 +37,58 @@
     <br><br>
     <p id="latest_articles" style="font-family: 'Courier New', monospace; font-size: 20px;">Latest Articles</p>
     <br><br>
-      <div class="content">
-          <div class="container">
-              <div class="row">
-                  {% for blog in blogs %}
-                  <div class="col-xs-12 col-sm-4">
-                      <div class="card">
-                          <a class="img-card" href="{% url 'blog:blog_body' blog.id %}">
-                          <img src="{{ blog.blog_image.url }}" />
-                        </a>
-                          <div class="card-content">
-                              <h4 class="card-title">
-                                  <a href="{% url 'blog:blog_body' blog.id %}"> {{ blog.blog_name }}
-                                </a>
-                              </h4>
-                              <p style="font-size: smaller;"><i>11th June 2022</i></p>
-                              <p class="">
-                                  Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
-                              </p>
-                          </div>
-                          <div class="card-read-more">
-                              <a href="{% url 'blog:blog_body' blog.id %}" class="btn btn-link btn-block">
-                                  Read More
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-                  {% endfor %}
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          {% for blog in blogs %}
+            <div class="col-xs-12 col-sm-4 blog-item {% if forloop.counter > 6 %}hidden{% endif %}">
+            <div class="card">
+              <a class="img-card" href="{% url 'blog:blog_body' blog.slug %}">
+                <img src="{{ blog.blog_image.url }}" />
+              </a>
+              <div class="card-content">
+                <h4 class="card-title">
+                  <a href="{% url 'blog:blog_body' slug=blog.slug %}">{{ blog.blog_name }}</a>
+                </h4>
+                <p style="font-size: smaller;"><i>{{ blog.blog_date }}</i> | {{ blog.blog_read_time }} mins read.</p>
+                <p class="">{{ blog.blog_card_intro }} ...</p>
               </div>
+              <div class="card-read-more">
+                <a href="{% url 'blog:blog_body' blog.slug %}" class="btn btn-link btn-block">Read More</a>
+              </div>
+            </div>
           </div>
+
+          
+          {% endfor %}
+        </div>
+        <div id="loadMoreBtn" class="text-center">
+          <button class="btn btn-primary">Load All</button>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var blogsToShow = 3;
+  var blogs = document.querySelectorAll('.blog-item');
+
+  // Hide additional blogs initially
+  for (var i = blogsToShow; i < blogs.length; i++) {
+    blogs[i].style.display = 'none';
+  }
+
+  // Show more blogs on button click
+  document.getElementById('loadMoreBtn').addEventListener('click', function() {
+    for (var i = blogsToShow; i < blogs.length; i++) {
+      blogs[i].style.display = 'block';
+    }
+    document.getElementById('loadMoreBtn').style.display = 'none'; // Hide the button after showing all blogs
+  });
+});
+</script>
 
 
 <section class="footer" style="color: aliceblue;">

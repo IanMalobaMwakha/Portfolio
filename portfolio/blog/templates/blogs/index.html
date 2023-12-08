@@ -43,7 +43,7 @@
           {% for blog in blogs %}
             <div class="col-xs-12 col-sm-4 blog-item {% if forloop.counter > 6 %}hidden{% endif %}">
             <div class="card">
-              <a class="img-card" href="{% url 'blog:blog_body' blog.slug %}">
+              <a class="img-card" href="{% url 'blog:blog_body' slug=blog.slug %}">
                 <img src="{{ blog.blog_image.url }}" />
               </a>
               <div class="card-content">
@@ -54,7 +54,7 @@
                 <p class="">{{ blog.blog_card_intro }} ...</p>
               </div>
               <div class="card-read-more">
-                <a href="{% url 'blog:blog_body' blog.slug %}" class="btn btn-link btn-block">Read More</a>
+                <a href="{% url 'blog:blog_body' slug=blog.slug %}" class="btn btn-link btn-block">Read More</a>
               </div>
             </div>
           </div>

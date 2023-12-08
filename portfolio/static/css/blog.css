@@ -9,9 +9,21 @@
 .BlogsIntro {
     margin-top: 70px;
     margin: 25px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
 }
 
 .AllBlogs {
     align-items: center;
     margin-top: 80px;
 }
+
+.aurelius-quote {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }

@@ -5,12 +5,18 @@
 {% load static %}  
 
 {% block content %}
-
-{{ blog.blog_name }}
-<img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 50%; height: 50%; object-fit: cover;" title="{{ blog.blog_name }}">
-
-{{ blog.body|safe }}
-{{blog.blog_name}}
+<br><br><br>
+<div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+  <h1 style="text-align: center; font-weight: 600;">{{ blog.blog_name }}</h1>
+  <br><br>
+  <p>By <b>IAN MALOBA</b><br>
+  <i style="font-size: smaller;">11th June 2022</i> | 3 mins read</p>
+  <img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 100%; height: 300px; object-fit: cover; display: block; margin: 0 auto; border-radius: 6px;" title="{{ blog.blog_name }}">
+  <br><br>
+  <div style="text-align: justify; font-size: 16px; line-height: 1.6;">
+      {{ blog.body|safe }}
+  </div>
+</div>
 
 
 <section class="footer" style="color: aliceblue;">

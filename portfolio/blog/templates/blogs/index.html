@@ -29,6 +29,38 @@
   <p style="font-family: cursive; text-align: center;"><a href="#latest_articles" style="text-decoration: none; color: rgb(128, 213, 224);"><button class="btn btn-primary">Check out my latest articles below 👇</button></a></p> 
 </section>
 
+<section>
+  {% if query %}
+  <div>
+      <div>
+      <!-- check if there is a result in the database-->
+      {% if posts %}
+          <!-- loop through search query if there is a result -->
+          {% for post in posts %}
+              <div>
+                  <!-- return search query -->
+                  <p>{{post.title}}</p>
+              </div>
+          {% endfor %}
+          <!-- return a message if there are no results found. -->
+      {% else %}
+          <h3>No search results found</h3>
+      {% endif %}
+      </div>
+  </div>
+{% else %}
+  <h1></h1>
+{% endif %}
+</section>
+
+
+<!-- AllBlogs section-->
+
+<!-- AllBlogs section-->
+
+<!-- AllBlogs section-->
+
+<!-- AllBlogs section-->
 
 <!-- AllBlogs section-->
 
@@ -40,27 +72,51 @@
     <div class="content">
       <div class="container">
         <div class="row">
-          {% for blog in blogs %}
-            <div class="col-xs-12 col-sm-4 blog-item {% if forloop.counter > 6 %}hidden{% endif %}">
-            <div class="card">
-              <a class="img-card" href="{% url 'blog:blog_body' slug=blog.slug %}">
-                <img src="{{ blog.blog_image.url }}" />
-              </a>
-              <div class="card-content">
-                <h4 class="card-title">
-                  <a href="{% url 'blog:blog_body' slug=blog.slug %}">{{ blog.blog_name }}</a>
-                </h4>
-                <p style="font-size: smaller;"><i>{{ blog.blog_date }}</i> | {{ blog.blog_read_time }} mins read.</p>
-                <p class="">{{ blog.blog_card_intro }} ...</p>
+          {% if query %}
+            {% for post in posts %}
+              <div class="col-xs-12 col-sm-4 blog-item">
+                <div class="card">
+                  <a class="img-card" href="{% url 'blog:blog_body' slug=post.slug %}">
+                    <img src="{{ post.blog_image.url }}" />
+                  </a>
+                  <div class="card-content">
+                    <h4 class="card-title">
+                      <a href="{% url 'blog:blog_body' slug=post.slug %}">{{ post.blog_name }}</a>
+                    </h4>
+                    <p style="font-size: smaller;"><i>{{ post.blog_date }}</i> | {{ post.blog_read_time }} mins read.</p>
+                    <p class="">{{ post.blog_card_intro }} ...</p>
+                  </div>
+                  <div class="card-read-more">
+                    <a href="{% url 'blog:blog_body' slug=post.slug %}" class="btn btn-link btn-block">Read More</a>
+                  </div>
+                </div>
               </div>
-              <div class="card-read-more">
-                <a href="{% url 'blog:blog_body' slug=blog.slug %}" class="btn btn-link btn-block">Read More</a>
+            {% endfor %}
+            <br>
+            <a href="{% url 'blog:index' %}"><button id="backButton" type="button" class="btn btn-success" style="text-align: left !important;">Back</button>
+            </a>
+            <br><br>
+          {% else %}
+            {% for blog in blogs %}
+              <div class="col-xs-12 col-sm-4 blog-item {% if forloop.counter > 6 %}hidden{% endif %}">
+                <div class="card">
+                  <a class="img-card" href="{% url 'blog:blog_body' slug=blog.slug %}">
+                    <img src="{{ blog.blog_image.url }}" />
+                  </a>
+                  <div class="card-content">
+                    <h4 class="card-title">
+                      <a href="{% url 'blog:blog_body' slug=blog.slug %}">{{ blog.blog_name }}</a>
+                    </h4>
+                    <p style="font-size: smaller;"><i>{{ blog.blog_date }}</i> | {{ blog.blog_read_time }} mins read.</p>
+                    <p class="">{{ blog.blog_card_intro }} ...</p>
+                  </div>
+                  <div class="card-read-more">
+                    <a href="{% url 'blog:blog_body' slug=blog.slug %}" class="btn btn-link btn-block">Read More</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
         </div>
         <div id="loadMoreBtn" class="text-center">
           <button class="btn btn-primary">Load All</button>
@@ -69,6 +125,7 @@
     </div>
   </div>
 </section>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -85,10 +142,11 @@ document.addEventListener("DOMContentLoaded", function() {
     for (var i = blogsToShow; i < blogs.length; i++) {
       blogs[i].style.display = 'block';
     }
-    document.getElementById('loadMoreBtn').style.display = 'none'; // Hide the button after showing all blogs
+    document.getElementById('loadMoreBtn').style.display = 'none';
   });
 });
 </script>
+
 
 
 {% endblock %}

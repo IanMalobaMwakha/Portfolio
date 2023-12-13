@@ -170,10 +170,19 @@ h1.heading {
                   <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>             
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search Blogs" aria-label="Search">
+
+              <form class="d-flex" role="search" method="POST" action="{% url 'blog:search_blogs' %}">
+                {% csrf_token %}
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search Blogs"
+                    name="search_query"
+                    required aria-label="Search"
+                >
                 <button class="btn btn-success" type="submit">Search</button>
-              </form>
+            </form>            
+
             </div>
           </div>
         </div>
@@ -201,19 +210,15 @@ h1.heading {
                 {% for contact in my_email %}
                   <div class="d-flex justify-content-center mt-3">
                     <div class="mx-2">
-                      <a href="{{ contact.linkedln }}" target="_blank"><iconify-icon icon="devicon:linkedin" style="color: white; font-size: 23px;"></iconify-icon></a>
-                    </div>
-                    <div class="mx-2">
-                      <a href="{{ contact.github }}" target="_blank"><iconify-icon icon="bytesize:github" style="color: white; font-size: 23px;"></iconify-icon></a>
-                    </div>
-                    <div class="mx-2">
                       <a href="{{ contact.twitter }}" target="_blank"><iconify-icon icon="logos:twitter" style="color: white; font-size: 23px;"></iconify-icon></a>
                     </div>
                     <div class="mx-2">
-                      <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white; font-size: 23px;"></iconify-icon></a>
+                      <a href="{{ contact.linkedln }}" target="_blank">
+                        <iconify-icon icon="devicon:linkedin" style="color: white; font-size: 23px;"></iconify-icon>
+                      </a>
                     </div>
                     <div class="mx-2">
-                      <a href="{{ contact.whatsapp }}" target="_blank"><iconify-icon icon="logos:whatsapp-icon" style="color: white; font-size: 23px;"></iconify-icon></a>
+                      <a href="{{ contact.codepen }}" target="_blank"><iconify-icon icon="ant-design:codepen-circle-filled" style="color: white; font-size: 23px;"></iconify-icon></a>
                     </div>
                   </div>
                 {% endfor %}

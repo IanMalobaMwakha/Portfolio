@@ -8,5 +8,7 @@ app_name = 'blog'
 urlpatterns = [
     path('', views.index, name='index'),
     path('blog/<slug:slug>/', views.blog_body, name='blog_body'),
+    path('search/', views.search_blogs, name='search_blogs'),  # Add this line for the search functionality
+
 ]
 

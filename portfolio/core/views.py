@@ -8,6 +8,7 @@ def index(request):
     #Home
     name = Home.objects.get()
     official_image = Home.objects.get()
+    logo = Home.objects.get()
 
     #About
     unofficial_image = About.objects.get()
@@ -52,6 +53,7 @@ def index(request):
     return render(request, 'core/index.html', {
         'name': name,
         'official_image': official_image,
+        'logo': logo,
 
         'unofficial_image': unofficial_image,
 

@@ -10,30 +10,34 @@ def index(request):
     official_image = Home.objects.get()
     blogs = Blog.objects.all()
     my_email = Contact.objects.all()
+    logo = Home.objects.get()
 
     return render(request, "blogs/index.html", {
         "official_image": official_image,
         'blogs': blogs,
-        "my_email": my_email
+        "my_email": my_email,
+        'logo': logo
     })
 
 def blog_body(request, slug):
     blog = get_object_or_404(Blog, slug=slug)
     official_image = Home.objects.get()
     my_email = Contact.objects.all()
-
+    logo = Home.objects.get()
 
     return render(request, "blogs/blog_body.html", {
         "official_image": official_image,
         'blog': blog,
         'slug': slug,
-        "my_email": my_email
+        "my_email": my_email,
+        'logo': logo
     })
 
 
 def search_blogs(request):
     official_image = Home.objects.get()
     my_email = Contact.objects.all()
+    logo = Home.objects.get()
 
 
     if request.method == 'POST':
@@ -51,7 +55,8 @@ def search_blogs(request):
             'query': search_query, 
             "official_image": official_image,
             'posts': posts,
-            "my_email": my_email
+            "my_email": my_email,
+            'logo': logo
             })
     else:
         return render(request, 'blogs/index.html', {})

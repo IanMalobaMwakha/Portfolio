@@ -15,8 +15,8 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>{% block title %}{% endblock %} Ian Maloba</title>
-    <style>
-    </style>
+ 
+    {% include 'core/loading_spinner.html' %}
   </head>
 
   <body class="outerbody">
@@ -150,6 +150,29 @@ $(document).ready(function() {
     document.documentElement.scrollTop = 0;
   }
   </script>
+
+
+
+<script>
+  // Show loading spinner on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    showLoadingSpinner();
+  });
+
+  // Hide loading spinner when all content is loaded
+  window.addEventListener("load", function() {
+    hideLoadingSpinner();
+  });
+
+  function showLoadingSpinner() {
+    document.getElementById('loading-spinner-overlay').style.display = 'flex';
+  }
+
+  function hideLoadingSpinner() {
+    document.getElementById('loading-spinner-overlay').style.display = 'none';
+  }
+</script>
+
 
     </body>
 </html>

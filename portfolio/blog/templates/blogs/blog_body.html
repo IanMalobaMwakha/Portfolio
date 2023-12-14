@@ -13,6 +13,38 @@
   <i style="font-size: smaller;">{{ blog.blog_date }}</i> | {{ blog.blog_read_time }} mins read</p>
   <img src="{{ blog.blog_image.url }}" class="rounded-t-xl" style="width: 100%; height: 300px; object-fit: cover; display: block; margin: 0 auto; border-radius: 6px;" title="{{ blog.blog_name }}">
   <br>
+  <button onclick="copyPageLink()" style="color: aqua; background-color: black; border-radius: 5px; font-size: small;">Copy Blog Link</button>
+
+<script>
+  function copyPageLink() {
+    var copyText = window.location.href;
+
+    // Create a temporary element (textarea) to hold the text
+    var tempInput = document.createElement("textarea");
+    tempInput.value = copyText;
+
+    // Append the textarea to the body
+    document.body.appendChild(tempInput);
+
+    // Select the text in the textarea
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+    try {
+      // Copy the text inside the textarea
+      document.execCommand("copy");
+      // Remove the temporary textarea
+      document.body.removeChild(tempInput);
+      // Alert the copied text
+      alert("Link Copied!");
+    } catch (err) {
+      console.error('Unable to copy text: ', err);
+      alert("Failed to copy link. Please try again.");
+    }
+  }
+</script>
+
+
   <hr>
   <br>
   <div style="text-align: justify; font-size: 17px; line-height: 1.6;">

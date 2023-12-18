@@ -24,11 +24,15 @@ def blog_body(request, slug):
     official_image = Home.objects.get()
     my_email = Contact.objects.all()
     logo = Home.objects.get()
+    prev_blog = Blog.objects.filter(blog_date_for_ordering__lt=blog.blog_date_for_ordering).order_by('-blog_date_for_ordering').first()
+    next_blog = Blog.objects.filter(blog_date_for_ordering__gt=blog.blog_date_for_ordering).order_by('blog_date_for_ordering').first()
 
     return render(request, "blogs/blog_body.html", {
         "official_image": official_image,
         'blog': blog,
         'slug': slug,
+        'prev_blog': prev_blog,
+        'next_blog': next_blog,
         "my_email": my_email,
         'logo': logo
     })
